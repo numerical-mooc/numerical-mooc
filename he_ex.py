@@ -32,8 +32,8 @@ def main():
 		curve_points = [edge_point_list[i],edge_point_list[i+1]]
 		trans_curve = list(zip(*curve_points))
 		curve_list.append(base.CreateCurve(2,list(trans_curve[0]),list(trans_curve[1]),list(trans_curve[2])))
-	for i in range(0,3,2):
-		base.FacesNewFitted([curve_list[i],curve_list[i+1]])
+	for i in range(2):
+		base.FacesNewFitted([curve_list[i],curve_list[i+2]])
 
 
 if __name__ == '__main__':
