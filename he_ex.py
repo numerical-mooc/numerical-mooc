@@ -21,6 +21,9 @@ def main():
 	nod_list = []
 	point_list = []
 	curve_list = []
+	cons_list=[]
+	cons_set = []
+	collector = base.CollectNewModelEntities()
 	for ent in results:
 		ret = base.GetEntityCardValues(constants.NASTRAN, ent, ("X1", "X2", "X3"))
 		nod_list.append([ret['X1'], ret['X2'], ret['X3']])
@@ -34,7 +37,26 @@ def main():
 		curve_list.append(base.CreateCurve(2,list(trans_curve[0]),list(trans_curve[1]),list(trans_curve[2])))
 	for i in range(2):
 		base.FacesNewFitted([curve_list[i],curve_list[i+2]])
-
+	for i in collector.report():
+		if base.GetEntityType(constants.NASTRAN, i) == 'CONS':
+			cons_list.append(i)
+	for con in cons_list:
+		cons_set .append( base.GetEntityCardValues(constants.NASTRAN, con, ('ID','Length')))	
+	length_list = []
+	for length in cons_set:
+		length_list.append(length['Length'])
+	new_cons_list = list(cons_set)
+	min_length  = round(min(length_list),4)
+	temp_i = 0
+	for new_lis in cons_set:
+		if round(new_lis['Length']) != min_length:
+			new_cons_list.remove(new_lis)
+	req_cons_list = []
+	for cons in new_cons_list:
+		req_cons_list.append(base.GetEntity(constants.NASTRAN, "CONS", cons['ID']))
+	for c in range(2):
+		base.FacesNewFitted([req_cons_list[c],req_cons_list[c+2]])
+	base.Orient()
 
 if __name__ == '__main__':
 	main()
