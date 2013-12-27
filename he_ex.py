@@ -5,8 +5,7 @@
 # Author:      rmaries@gmail.com
 #
 # Created:     20/12/2013
-# Copyright:   (c) rmaries 2013
-# Licence:     GNU GPL
+# Licence:     GPL
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 import ansa
