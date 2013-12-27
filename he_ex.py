@@ -13,10 +13,9 @@ import itertools
 from ansa import base
 from ansa import constants
 
-def main():
+def he_core():
 
-	ents = ("CURVE", "FACE")
-	results = base.PickNodes(constants.NASTRAN, ents)
+	base.Not(base.CollectEntities(constants.NASTRAN,None,' __ALL_ENTITIES__'))
 	nod_list = []
 	point_list = []
 	curve_list = []
@@ -56,6 +55,12 @@ def main():
 	for c in range(2):
 		base.FacesNewFitted([req_cons_list[c],req_cons_list[c+2]])
 	base.Orient()
+	if base.CheckIntersections(True,True):
+		base.DeleteEntity(collector.report(), True)
+		he_core()
+	base.All()
 
 if __name__ == '__main__':
-	main()
+	ents = ("CURVE", "FACE")
+	results = base.PickNodes(constants.NASTRAN, ents)
+	he_core()
