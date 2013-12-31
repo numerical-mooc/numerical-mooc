@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Name:        Heat Exchanger Core creation
 # Author:      rmaries@gmail.com
-# Created:     20/12/2013
+# Created:     31/12/2013
 #!/usr/bin/env python
 
 
