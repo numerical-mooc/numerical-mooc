@@ -12,8 +12,8 @@ from ansa import constants
 
 def he_core():
 	ents = ("CURVE", "FACE")
+	results = base.PickNodes(constants.NASTRAN, ents)
 	base.Not(base.CollectEntities(constants.NASTRAN,None,' __ALL_ENTITIES__'))
-	results = base.PickNodes(constants.NASTRAN, ents)	
 	intersection = 1	
 	while intersection:		
 		nod_list = []
