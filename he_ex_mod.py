@@ -34,7 +34,7 @@ def he_core():
         base.FacesNewFitted([curve_list[i],curve_list[i+1]])
         base.FacesNewFitted([curve_list[i],curve_list[i+2]])
     for i in collector.report():
-        if i._type == 'CURVES':
+        if i._ansaType == 'CURVES':
             base.Delete(i)
     base.Topo()
     base.Orient()
