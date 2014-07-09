@@ -1,7 +1,10 @@
-scicomp-mooc
-============
+#Practical Numerical Methods in Python
 
-A collaborative educational initiative in computational science and engineering.
+A multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. Collaboratively developed by:
+- Lorena A. Barba, George Washington University, USA
+- Ian Hawke, Soutahmpton University, UK
+- Carlos Jerez, Pontificia Universidad Catolica de Chile
+- David Ketcheson, King Abdullah University of Science and Technology (KAUST), Saudi Arabia
 
 ##List of Modules
 
