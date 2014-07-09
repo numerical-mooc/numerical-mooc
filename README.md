@@ -18,4 +18,4 @@ Start with heat equation in 2D (first introduction of two-dimensional FD discret
 5. **Relax and hold steady: elliptic problems.**
 Laplace and Poisson equations (steps 9 and 10 of “CFD Python”), explained as systems relaxing under the influence of the boundary conditions and the Laplace operator; introducing the idea of pseudo-time and iterative methods. Linear solvers for PDEs : Jacobi’s method, slow convergence of low-frequency modes (matrix analysis of Jacobi), Jacobi as a smoother, Multigrid.
 6. **Tsunami: Shallow-water equation with finite volume method.**
-1D first … 2D problem with HPC solution (Python parallel or CUDA Python) -- See Issue #5.
+1D first … 2D problem with HPC solution (Python parallel or CUDA Python) -- See [Issue #5](https://github.com/barbagroup/numerical-mooc/issues/5).
