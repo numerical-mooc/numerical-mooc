@@ -10,5 +10,7 @@
    stability.
 
 Theory videos:
+
 A. Local truncation error, consistency, global error, convergence.
+
 B. Stability function, stability, stability+consistency=convergence.
