@@ -13,7 +13,6 @@
 
 #notebook_panel { /* main background */
     background: #888;
-    color: #f6f6f6;
 }
 
 div.cell { /* set cell width to about 80 chars */
@@ -38,16 +37,16 @@ div.cell.border-box-sizing.code_cell.running {
 
 /* Put a solid color box around each cell and its output, visually linking them together */
 div.cell.code_cell {
-    background-color: rgba(171,165,131,1.0); 
+    background-color: rgba(240,240,230,1.0); 
     border-radius: 10px; /* rounded borders */
     padding: 1em;
     margin-top: 1em;
 }
 
 div.text_cell_render{
-    font-family: 'Arvo' sans-serif;
-    line-height: 130%;
-    font-size: 115%;
+    font-family: 'Alegreya Sans' sans-serif;
+    line-height: 140%;
+    font-size: 135%;
     width:700px;
     margin-left:auto;
     margin-right:auto;
