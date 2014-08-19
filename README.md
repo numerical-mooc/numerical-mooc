@@ -4,7 +4,8 @@ A multi-campus, connected course (plus MOOC) on numerical methods for differenti
 - Lorena A. Barba, George Washington University, USA
 - Ian Hawke, Southampton University, UK
 - Carlos Jerez, Pontificia Universidad Catolica de Chile
-- David Ketcheson, King Abdullah University of Science and Technology (KAUST), Saudi Arabia
+
+**Note:** David Ketcheson, from King Abdullah University of Science and Technology (KAUST), Saudi Arabia was going to be our fourth partner, but unfortunately the local course at KAUST got cancelled due to low enrollment.
 
 ##List of Modules
 
@@ -20,5 +21,7 @@ Starting with the inviscid Burgers’ equation in conservation form and a 1D sho
 Start with heat equation in 2D (first introduction of two-dimensional FD discretization). Introduce implicit methods: backward Euler, trapezoidal rule (Crank-Nicolson), backward-differentiation formula (BDF). Pattern formation models (reaction-diffusion). Theory content: A-stability (unconditional stability), L-stability (?). Fourier spectral methods and splitting.
 5. **Relax and hold steady: elliptic problems.**
 Laplace and Poisson equations (steps 9 and 10 of “CFD Python”), explained as systems relaxing under the influence of the boundary conditions and the Laplace operator; introducing the idea of pseudo-time and iterative methods. Linear solvers for PDEs : Jacobi’s method, slow convergence of low-frequency modes (matrix analysis of Jacobi), Jacobi as a smoother, Multigrid.
-6. **Tsunami: Shallow-water equation with finite volume method.**
+6. **Boundaries take over: the boundary element method (BEM).**
+Weak and boundary integral formulation of elliptic partial differential equations; the free space Green's function. Boundary discretization: basis functions; collocation and Galerkin systems. The BEM stiffness matrix: dense versus sparse;  matrix conditioning. Solving the BEM system: singular and near-singular integrals; Gauss quadrature integration.
+7. **Tsunami: Shallow-water equation with finite volume method.**
 1D first … 2D problem with HPC solution (Python parallel or CUDA Python) -- See [Issue #5](https://github.com/barbagroup/numerical-mooc/issues/5).
