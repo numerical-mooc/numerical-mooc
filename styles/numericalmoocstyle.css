@@ -66,13 +66,13 @@ div.text_cell_render{
     display: block;
 }	
 .text_cell_render h2 {
-    font-family: 'Arvo', serif;
+    font-family: 'Nixie One', serif;
     font-weight: 400;
-    font-size: 22pt;
+    font-size: 30pt;
     line-height: 100%;
     color: rgb(0,51,102);
     margin-bottom: 0.1em;
-    margin-top: 0.1em;
+    margin-top: 0.3em;
     display: block;
 }	
 
