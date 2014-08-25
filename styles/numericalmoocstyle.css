@@ -34,7 +34,7 @@ div.cell.border-box-sizing.code_cell.running {
     border: 1px solid #111;
 }
 
-/* Put a solid color box around each cell and its output, visually linking them together */
+/* Put a solid color box around each cell and its output, visually linking them*/
 div.cell.code_cell {
     background-color: rgb(256,256,256); 
     border-radius: 0px; 
@@ -46,7 +46,7 @@ div.text_cell_render{
     font-family: 'Alegreya Sans' sans-serif;
     line-height: 140%;
     font-size: 125%;
-    font-weight: 4s00;
+    font-weight: 400;
     width:600px;
     margin-left:auto;
     margin-right:auto;
@@ -102,7 +102,8 @@ div.text_cell_render{
 .text_cell_render h6 {
     font-family: 'PT Mono', sans-serif;
     font-weight: 300;
-    font-size: 10pt;
+    font-size: 9pt;
+    line-height: 100%;
     color: grey;
     margin-bottom: 1px;
     margin-top: 1px;
