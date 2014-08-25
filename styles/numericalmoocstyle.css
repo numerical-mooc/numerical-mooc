@@ -78,9 +78,11 @@ div.text_cell_render{
 
 .text_cell_render h3 {
     font-family: 'Nixie One', serif;
-    margin-top:12px;
+    margin-top:16px;
+	font-size: 22pt;
+    font-weight: 600;
     margin-bottom: 3px;
-    font-style: italic;
+    font-style: regular;
     color: rgb(95,92,72);
 }
 
