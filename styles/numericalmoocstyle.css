@@ -14,15 +14,15 @@
     background: rgb(245,245,245);
 }
 
-div.cell { /* set cell width to about 80 chars */
-    width: 800px;
+div.cell { /* set cell width */
+    width: 750px;
 }
 
 div #notebook { /* centre the content */
     background: #fff; /* white background for content */
     width: 1000px;
     margin: auto;
-    padding-left: 1em;
+    padding-left: 0em;
 }
 
 #notebook li { /* More space between bullet points */
@@ -39,6 +39,7 @@ div.cell.code_cell {
     background-color: rgb(256,256,256); 
     border-radius: 0px; 
     padding: 0.5em;
+    margin-left:1em;
     margin-top: 1em;
 }
 
