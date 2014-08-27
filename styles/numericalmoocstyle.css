@@ -87,8 +87,13 @@ div.text_cell_render{
     color: rgb(95,92,72);
 }
 
-.text_cell_render h4 {
+.text_cell_render h4 {    /*Use this for captions*/
     font-family: 'Nixie One', serif;
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    font-style: regular;
 }
 
 .text_cell_render h5 {
