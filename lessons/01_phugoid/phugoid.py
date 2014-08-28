@@ -58,7 +58,7 @@ def plot_flight_path(yt, y0, theta0):
     ds = 1 
         
     #obtain the curve coordinates
-    for i in xrange(1,N):
+    for i in range(1,N):
         normal = numpy.array([numpy.cos(theta+numpy.pi/2.), numpy.sin(theta+numpy.pi/2.)])
         R = radius_of_curvature(y[i-1], yt, C)
         center = numpy.array([x[i-1]+normal[0]*R, y[i-1]+normal[1]*R])
