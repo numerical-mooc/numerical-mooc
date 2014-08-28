@@ -19,9 +19,9 @@ def rotate(x, y, xCenter, yCenter, angle):
 
 # plot the flight path. The inputs are the trim height and the initial position 
 # and orientation of the aircraft
-def plot_flight_path(yt, y0, theta0, case_name='dummy'):	
+def plot_flight_path(yt, y0, theta0):	
 	# arrays to store the coordinates of the flight path
-	N = 5000
+	N = 1000
 	y = numpy.zeros(N)
 	x = numpy.zeros(N)
 
@@ -35,7 +35,9 @@ def plot_flight_path(yt, y0, theta0, case_name='dummy'):
         C = (numpy.cos(theta) - 1./3*y[0]/yt)*(y[0]/yt)**.5
 
 	# incremental distance along the flight path
-        ds = 1 obtain the curve coordinates
+        ds = 1 
+        
+        #obtain the curve coordinates
 	for i in xrange(1,N):
 		normal = numpy.array([numpy.cos(theta+numpy.pi/2.), numpy.sin(theta+numpy.pi/2.)])
 		R = radius_of_curvature(y[i-1], yt, C)
@@ -50,11 +52,8 @@ def plot_flight_path(yt, y0, theta0, case_name='dummy'):
 	plt.title("Flight path for C = %.4f" % C)
         plt.xlabel("$x$")
 	plt.ylabel("$z$")
-#	plt.axis([-100, 1000, -300, 50])
 	plt.legend()
         plt.show()
 
 
-#plot_flight_path(600., 600., -numpy.pi, "1_looped_path")
-#plot_flight_path(64., 16., 0., "2_inflected_path")
 
