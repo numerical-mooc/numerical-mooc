@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 def radius_of_curvature(y, yt, C):
     """Returns the radius of curvature of the flight path at any point.
     
-    Arguments
+    Parameters
     ---------
     y : float
         current depth below the reference horizontal line.
@@ -15,6 +15,11 @@ def radius_of_curvature(y, yt, C):
         initial depth below the reference horizontal line.
     C : float
         constant of integration.
+
+    Returns
+    -------
+    radius : float
+        radius of curvature.
     """
     #return 2./(C*(1./y)**1.5 - 2./3./yt)
     return -1*yt / (1./3 - C/2.*(yt/y)**1.5)
@@ -22,7 +27,7 @@ def radius_of_curvature(y, yt, C):
 def rotate(x, y, xCenter, yCenter, angle):
     """Returns the new position of the point.
 
-    Arguments
+    Parameters
     ---------
     x : float
         previous x-position of the point
@@ -34,6 +39,13 @@ def rotate(x, y, xCenter, yCenter, angle):
         y-location of the center of rotation.
     angle : float
         angle of rotation
+
+    Returns
+    -------
+    xCenter_new : float
+        new x-location of the center of rotation.
+    yCenter_new : float
+        new y-location of the center of rotation.
     """
     dx = x - xCenter
     dy = y - yCenter
@@ -44,7 +56,7 @@ def rotate(x, y, xCenter, yCenter, angle):
 def plot_flight_path(yt, y0, theta0):
     """Plots the flight path.
 
-    Arguments
+    Parameters
     ---------
     yt : float
         trim height of the glider.
@@ -52,6 +64,10 @@ def plot_flight_path(yt, y0, theta0):
         initial height of the glider.
     theta0 : float
         initial orientation of the glider.
+
+    Returns
+    -------
+    None : None
     """
     # arrays to store the coordinates of the flight path
     N = 1000
