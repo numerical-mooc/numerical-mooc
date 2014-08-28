@@ -5,77 +5,75 @@ import numpy
 import matplotlib.pyplot as plt
 
 def radius_of_curvature(y, yt, C):
-	"""Returns the radius of curvature of the flight path at any point.
-	
-	Arguments
-	---------
-	y -- current depth below the reference horizontal line.
-	yt -- initial depth below the reference horizontal line.
-	C -- constant of integration.
-	"""
-	#return 2./(C*(1./y)**1.5 - 2./3./yt)
+    """Returns the radius of curvature of the flight path at any point.
+    
+    Arguments
+    ---------
+    y -- current depth below the reference horizontal line.
+    yt -- initial depth below the reference horizontal line.
+    C -- constant of integration.
+    """
+    #return 2./(C*(1./y)**1.5 - 2./3./yt)
     return -1*yt / (1./3 - C/2.*(yt/y)**1.5)
 
 def rotate(x, y, xCenter, yCenter, angle):
-	"""Returns the new position of the point.
+    """Returns the new position of the point.
 
-	Arguments
-	---------
-	x, y -- previous position of the point.
-	xCenter, yCenter -- center of rotation.
-	angle -- angle of rotation
-	"""
-	dx = x - xCenter
-	dy = y - yCenter
-	xNew = dx*numpy.cos(angle) - dy*numpy.sin(angle)
-	yNew = dx*numpy.sin(angle) + dy*numpy.cos(angle)
-	return xCenter + xNew, yCenter + yNew
+    Arguments
+    ---------
+    x, y -- previous position of the point.
+    xCenter, yCenter -- center of rotation.
+    angle -- angle of rotation
+    """
+    dx = x - xCenter
+    dy = y - yCenter
+    xNew = dx*numpy.cos(angle) - dy*numpy.sin(angle)
+    yNew = dx*numpy.sin(angle) + dy*numpy.cos(angle)
+    return xCenter + xNew, yCenter + yNew
 
 def plot_flight_path(yt, y0, theta0):
-	"""Plots the flight path.
+    """Plots the flight path.
 
-	Arguments
-	---------
-	yt -- trim height of the glider.
-	y0 -- initial height of the glider.
-	theta0 -- initial orientation of the glider.
-	"""
-	# arrays to store the coordinates of the flight path
-	N = 1000
-	y = numpy.zeros(N)
-	x = numpy.zeros(N)
+    Arguments
+    ---------
+    yt -- trim height of the glider.
+    y0 -- initial height of the glider.
+    theta0 -- initial orientation of the glider.
+    """
+    # arrays to store the coordinates of the flight path
+    N = 1000
+    y = numpy.zeros(N)
+    x = numpy.zeros(N)
 
-	# set initial conditions
-	y[0] = y0
-	x[0] = 0.
-	theta = theta0
+    # set initial conditions
+    y[0] = y0
+    x[0] = 0.
+    theta = theta0
 
-	# calculate the constant C
-	#C = numpy.sqrt(y[0])*(numpy.cos(theta) - y[0]/yt/3.)
+    # calculate the constant C
+    #C = numpy.sqrt(y[0])*(numpy.cos(theta) - y[0]/yt/3.)
     C = (numpy.cos(theta) - 1./3*y[0]/yt)*(y[0]/yt)**.5
 
-	# incremental distance along the flight path
+    # incremental distance along the flight path
     ds = 1 
         
     #obtain the curve coordinates
-	for i in xrange(1,N):
-		normal = numpy.array([numpy.cos(theta+numpy.pi/2.), numpy.sin(theta+numpy.pi/2.)])
-		R = radius_of_curvature(y[i-1], yt, C)
-		center = numpy.array([x[i-1]+normal[0]*R, y[i-1]+normal[1]*R])
-		dtheta = ds/R
-		x[i], y[i] = rotate(x[i-1], y[i-1], center[0], center[1], dtheta)
-		theta = theta + dtheta
+    for i in xrange(1,N):
+        normal = numpy.array([numpy.cos(theta+numpy.pi/2.), numpy.sin(theta+numpy.pi/2.)])
+        R = radius_of_curvature(y[i-1], yt, C)
+        center = numpy.array([x[i-1]+normal[0]*R, y[i-1]+normal[1]*R])
+        dtheta = ds/R
+        x[i], y[i] = rotate(x[i-1], y[i-1], center[0], center[1], dtheta)
+        theta = theta + dtheta
 
-	# generate a plot
-	plt.figure(figsize=(10,6))
-    plt.plot(x, -y,
-			 color = 'k', ls='-', lw=2.0,
-			 label="$z_t=\ %.1f,\\,z_1=\ %.1f,\\,\\theta_1=\ %.2f$" % (yt, y[0], theta0))
+    # generate a plot
+    plt.figure(figsize=(10,6))
+    plt.plot(x, -y, color = 'k', ls='-', lw=2.0, label="$z_t=\ %.1f,\\,z_1=\ %.1f,\\,\\theta_1=\ %.2f$" % (yt, y[0], theta0))
     plt.axis('equal')
-	plt.title("Flight path for $C$ = %.3f" % C, fontsize=18)
+    plt.title("Flight path for $C$ = %.3f" % C, fontsize=18)
     plt.xlabel("$x$", fontsize=18)
-	plt.ylabel("$z$", fontsize=18)
-	plt.legend()
+    plt.ylabel("$z$", fontsize=18)
+    plt.legend()
     plt.show()
 
 # End of File
