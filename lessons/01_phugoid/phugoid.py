@@ -9,9 +9,12 @@ def radius_of_curvature(y, yt, C):
     
     Arguments
     ---------
-    y -- current depth below the reference horizontal line.
-    yt -- initial depth below the reference horizontal line.
-    C -- constant of integration.
+    y : float
+        current depth below the reference horizontal line.
+    yt : float
+        initial depth below the reference horizontal line.
+    C : float
+        constant of integration.
     """
     #return 2./(C*(1./y)**1.5 - 2./3./yt)
     return -1*yt / (1./3 - C/2.*(yt/y)**1.5)
@@ -21,9 +24,16 @@ def rotate(x, y, xCenter, yCenter, angle):
 
     Arguments
     ---------
-    x, y -- previous position of the point.
-    xCenter, yCenter -- center of rotation.
-    angle -- angle of rotation
+    x : float
+        previous x-position of the point
+    y : float
+        previous y-position of the point.
+    xCenter : float
+        x-location of the center of rotation.
+    yCenter : float
+        y-location of the center of rotation.
+    angle : float
+        angle of rotation
     """
     dx = x - xCenter
     dy = y - yCenter
@@ -36,9 +46,12 @@ def plot_flight_path(yt, y0, theta0):
 
     Arguments
     ---------
-    yt -- trim height of the glider.
-    y0 -- initial height of the glider.
-    theta0 -- initial orientation of the glider.
+    yt : float
+        trim height of the glider.
+    y0 : float
+        initial height of the glider.
+    theta0 : float
+        initial orientation of the glider.
     """
     # arrays to store the coordinates of the flight path
     N = 1000
