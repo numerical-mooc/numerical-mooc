@@ -1,0 +1,141 @@
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+<style>
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+}
+
+#notebook_panel { /* main background */
+    background: rgb(245,245,245);
+}
+
+div.cell { /* set cell width */
+    width: 750px;
+}
+
+div #notebook { /* centre the content */
+    background: #fff; /* white background for content */
+    width: 1000px;
+    margin: auto;
+    padding-left: 0em;
+}
+
+#notebook li { /* More space between bullet points */
+margin-top:0.8em;
+}
+
+/* draw border around running cells */
+div.cell.border-box-sizing.code_cell.running { 
+    border: 1px solid #111;
+}
+
+/* Put a solid color box around each cell and its output, visually linking them*/
+div.cell.code_cell {
+    background-color: rgb(256,256,256); 
+    border-radius: 0px; 
+    padding: 0.5em;
+    margin-left:1em;
+    margin-top: 1em;
+}
+
+div.text_cell_render{
+    font-family: 'Alegreya Sans' sans-serif;
+    line-height: 140%;
+    font-size: 125%;
+    font-weight: 400;
+    width:600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* Formatting for header cells */
+.text_cell_render h1 {
+    font-family: 'Nixie One', serif;
+    font-style:regular;
+    font-weight: 400;    
+    font-size: 45pt;
+    line-height: 100%;
+    color: rgb(0,51,102);
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: block;
+}	
+.text_cell_render h2 {
+    font-family: 'Nixie One', serif;
+    font-weight: 400;
+    font-size: 30pt;
+    line-height: 100%;
+    color: rgb(0,51,102);
+    margin-bottom: 0.1em;
+    margin-top: 0.3em;
+    display: block;
+}	
+
+.text_cell_render h3 {
+    font-family: 'Nixie One', serif;
+    margin-top:16px;
+	font-size: 22pt;
+    font-weight: 600;
+    margin-bottom: 3px;
+    font-style: regular;
+    color: rgb(102,102,0);
+}
+
+.text_cell_render h4 {    /*Use this for captions*/
+    font-family: 'Nixie One', serif;
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    font-style: regular;
+}
+
+.text_cell_render h5 {  /*Use this for small titles*/
+    font-family: 'Nixie One', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    color: rgb(163,0,0);
+    font-style: italic;
+    margin-bottom: .1em;
+    margin-top: 0.8em;
+    display: block;
+}
+
+.text_cell_render h6 { /*use this for copyright note*/
+    font-family: 'PT Mono', sans-serif;
+    font-weight: 300;
+    font-size: 9pt;
+    line-height: 100%;
+    color: grey;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+.CodeMirror{
+        font-family: "PT Mono";
+        font-size: 90%;
+}
+
+</style>
+<script>
+    MathJax.Hub.Config({
+                        TeX: {
+                           extensions: ["AMSmath.js"],
+                           equationNumbers: { autoNumber: "AMS", useLabelIds: true}
+                           },
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                },
+                displayAlign: 'center', // Change this to 'center' to center equations.
+                "HTML-CSS": {
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
+        });
+</script>
