@@ -84,7 +84,7 @@ div.text_cell_render{
     font-weight: 600;
     margin-bottom: 3px;
     font-style: regular;
-    color: rgb(95,92,72);
+    color: rgb(102,102,0);
 }
 
 .text_cell_render h4 {    /*Use this for captions*/
@@ -96,18 +96,18 @@ div.text_cell_render{
     font-style: regular;
 }
 
-.text_cell_render h5 {
-    font-family: 'Arvo', sans-serif;
+.text_cell_render h5 {  /*Use this for small titles*/
+    font-family: 'Nixie One', sans-serif;
     font-weight: 400;
     font-size: 16pt;
-    color: grey;
+    color: rgb(163,0,0);
     font-style: italic;
     margin-bottom: .1em;
-    margin-top: 0.1em;
+    margin-top: 0.8em;
     display: block;
 }
 
-.text_cell_render h6 {
+.text_cell_render h6 { /*use this for copyright note*/
     font-family: 'PT Mono', sans-serif;
     font-weight: 300;
     font-size: 9pt;
