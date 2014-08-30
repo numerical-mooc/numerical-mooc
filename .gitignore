@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.py[cod]
 
 # C extensions
@@ -34,3 +35,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+=======
+lessons/phugoid/.ipynb_checkpoints/*checkpoint.ipynb
+>>>>>>> upstream/master
