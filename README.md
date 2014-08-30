@@ -1,3 +1,5 @@
+ORA CI RIPROVO PER LA SECONDA VOLTA!!!
+
 PROVIAMO A VEDERE COME FUNZIONA!!!
 
 #Practical Numerical Methods in Python
