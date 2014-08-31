@@ -7,7 +7,7 @@ A multi-campus, connected course (plus MOOC) on numerical methods for differenti
 
 **Note:** David Ketcheson, from King Abdullah University of Science and Technology (KAUST), Saudi Arabia was going to be our fourth partner, but unfortunately the local course at KAUST got cancelled due to low enrollment.
 
-####Find the list of IPython Notebooks, with links to nbviewer, in the Wiki.
+####Find the list of IPython Notebooks, with links to nbviewer, in the [Wiki](https://github.com/numerical-mooc/numerical-mooc/wiki).
 
 ##List of Modules
 
