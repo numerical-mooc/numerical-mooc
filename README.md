@@ -1,7 +1,5 @@
 <<<<<<< HEAD
-﻿Hi All, This is Picklu, a mooc learner of this course.
-=======
-﻿Hello EveryOne! I am Picklu, a mooc lerarner of this course.
+Hello EveryOne! I am Picklu, a mooc lerarner of this course.
 >>>>>>> origin/master
 #Practical Numerical Methods in Python
 
