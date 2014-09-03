@@ -1,5 +1,5 @@
 import numpy
-from math import sin, cos 
+from math import sin, cos, ceil 
 
 def f(u):
     """Returns the right-hand side of the phugoid system of equations.
