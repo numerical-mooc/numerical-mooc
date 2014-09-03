@@ -1,4 +1,4 @@
-Edition du "`README.md`" par **&Egrave;ric** (**`Eric38fr`**)
+Edition du "`README.md`" par **&Eacute;ric** (**`Eric38fr`**)
 #Practical Numerical Methods in Python
 
 A multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. Collaboratively developed by:
