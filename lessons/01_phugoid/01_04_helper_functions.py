@@ -2,7 +2,7 @@ import numpy
 from math import sin, cos 
 
 def f(u):
-    """Returns the right hand-side of the phugoid system of equations.
+    """Returns the right-hand side of the phugoid system of equations.
     
     Parameters
     ----------
@@ -14,12 +14,6 @@ def f(u):
     dudt : array of float
         array containing the RHS given u.
     """
-    ### to be implemented ###
-    
-    g = 1.0 # gravity in m s^{-2}, but normalized to 1.0.
-    v_t = 1.0 # trim velocity in m s^{-1} : what value should be used? 
-    C_D = 0.2 # to match drag coefficient
-    C_L = 1.0 # which only works if C_L = 1
     
     v = u[0]
     theta = u[1]
@@ -48,11 +42,11 @@ def euler_step(u, f, dt):
     u_n_plus_1 : array of float
         approximate solution at the next time step.
     """
-    ### to be implemented ###
+    
     return u + dt * f(u)
 
 
-def get_error(u_current, u_fine, dt):
+def get_diffgrid(u_current, u_fine, dt):
     """Returns the difference between one grid and the fine one using L-1 norm.
     
     Parameters
@@ -66,10 +60,16 @@ def get_error(u_current, u_fine, dt):
     
     Returns
     -------
-    l1_error : float
-        error computed in the L-1 norm.
+    diffgrid : float
+        difference computed in the L-1 norm.
     """
-    ### to be implemented ###
+    
     N_current = len(u_current[:,0])
     N_fine = len(u_fine[:,0])
-    return dt * numpy.sum(numpy.abs(u_current[:,2]-u_fine[::N_fine/N_current,2]))
+   
+    grid_size_ratio = ceil(N_fine/float(N_current))
+    
+    diffgrid = dt * numpy.sum( numpy.abs(\
+            u_current[:,2]- u_fine[::grid_size_ratio,2])) 
+    
+    return diffgrid
