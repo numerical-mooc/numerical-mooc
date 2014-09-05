@@ -1,3 +1,9 @@
+#ADESSO E' LA TERZA VOLTA
+
+ORA CI RIPROVO PER LA SECONDA VOLTA!!!
+
+PROVIAMO A VEDERE COME FUNZIONA!!!
+
 #Practical Numerical Methods in Python
 
 A multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. Collaboratively developed by:
