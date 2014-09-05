@@ -1,4 +1,3 @@
-RawBlameHistory  
 # Script to plot the flight path of the phugoid using Lanchester's model.
 # It uses the sign convention and formulae provided by Milne-Thomson (1958).
 
