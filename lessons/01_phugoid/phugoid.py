@@ -97,7 +97,7 @@ def plot_flight_path(zt, z0, theta0):
 
     # generate a plot
     plt.figure(figsize=(10,6))
-    plt.plot(x, -z, color = 'k', ls='-', lw=2.0, label="$z_t=\ %.1f,\\,z_1=\ %.1f,\\,\\theta_1=\ %.2f$" % (zt, z[0], theta0))
+    plt.plot(x, -z, color = 'k', ls='-', lw=2.0, label="$z_t=\ %.1f,\\,z_0=\ %.1f,\\,\\theta_0=\ %.2f$" % (zt, z[0], theta0))
     plt.axis('equal')
     plt.title("Flight path for $C$ = %.3f" % C, fontsize=18)
     plt.xlabel("$x$", fontsize=18)
