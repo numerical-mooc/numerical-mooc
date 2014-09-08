@@ -1,0 +1,40 @@
+import numpy
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+T = 100.
+dt = 0.01
+N = int(T/dt)+1
+t = np.arange(0.,T+dt,dt)
+
+# initial conditions
+z0 = 100. # altitude
+v = 10. # upward velocity resulting from gust
+zt = 100. # trim altitude
+g = 9.81
+
+u = numpy.array([z0,v])
+
+# initializing an array to hold the changing angle values
+z = numpy.zeros(N)
+z[0] = z0
+
+# time-loop using Euler's method
+for n in range(1,N):
+    u = u+dt*numpy.array([u[1],g*(1-u[0]/zt)])
+    z[n] = u[0]
+    
+# exact solution of the 2nd order, linear ODE
+
+z_exact = v*(zt/g)**.5*numpy.sin((g/zt)**.5*t)+(z0-zt)*numpy.cos((g/zt)**.5*t)+zt
+
+# plotting both solutions
+
+plt.figure(figsize=(10,4))   # set plot size
+plt.ylim(40,160)             # y-axis plot limits
+plt.tick_params(axis='both', labelsize=14) # increase font size for ticks
+plt.xlabel('t', fontsize=14) # x label
+plt.ylabel('z', fontsize=14) # y label
+plt.plot(t,z)
+plt.plot(t,z_exact)
+plt.legend(['Numerical Solution','Analytical Solution']);
