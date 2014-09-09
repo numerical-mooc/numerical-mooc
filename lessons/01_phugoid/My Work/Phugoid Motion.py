@@ -9,19 +9,12 @@
 
 #Import Librarys
 import numpy
-import matplotlib.pyplot as ply
-%matplotlib inline
-
-# <headingcell level=2>
-
-# Time Array Set Up
-
-# <codecell>
+import matplotlib.pyplot as plt
 
 T=100.0
 dt=0.01
 #Barba's linspace code
-#N=int(T/dt)+1 #use int and add 1 to get a whole number for number of steps
+N=int(T/dt)+1 #use int and add 1 to get a whole number for number of steps
 #t=numpy.linspace(0.0,T,N)
 #using arrange eliminates the need for N
 
@@ -30,11 +23,7 @@ dt=0.01
 t=numpy.arange(0.0,T+dt,dt) #needs to increase size but remain whole number
 print t
 
-# <headingcell level=2>
-
 # Initial Conditions Set Up
-
-# <codecell>
 
 z_0=100 #intial height, m
 v=10 #upward v from gust, m/s
@@ -48,21 +37,11 @@ z=numpy.zeros(N)
 z[0]=z_0
 print u, len(z)
 
-# <headingcell level=2>
-
 # Euler's Method
-
-# <codecell>
 
 for n in range(1,N):
     u=u+dt*numpy.array([u[1],g*(1-(u[0]/zt))])
     z[n]=u[0]
-
-# <headingcell level=2>
-
-# Plot
-
-# <codecell>
 
 plt.figure(figsize=(10,4))
 plt.ylim(40,160)
@@ -70,36 +49,9 @@ plt.tick_params(axis="both", labelsize = 16)
 plt.xlabel("time, t", fontsize = 16)
 plt.ylabel("height, z", fontsize = 16)
 plt.plot(t,z);
-
-# <headingcell level=2>
-
-# Questions
-
-# <markdowncell>
-
-# 1) What happens when you have a larger gust?
-# 
-# 2) What about a smaller gust?
-# 
-# 3) What happens if there isn't a gust (v = 0)?
-
-# <headingcell level=2>
-
-# Answers
-
-# <markdowncell>
-
-# 1) The amplitude of the oscillations increases relative to the 10 m/s intial gust.
-# 
-# 2) The amplitude of the oscillations decrease relative to the 10 m/s intial gust.
-# 
-# 3) The oscillations are eliminated as the is not pertibation from steady state (level flight).
-
-# <headingcell level=2>
+plt.show()
 
 # Exact Solution
-
-# <codecell>
 
 z_exact=v*((zt/g)**0.5)*numpy.sin((g/zt)**0.5*t)+(z_0-zt)*numpy.cos((g/zt)**0.5*t)+zt
 
@@ -111,12 +63,9 @@ plt.ylabel("height, z", fontsize = 16)
 plt.plot(t,z);
 plt.plot(t, z_exact)
 plt.legend(["Numerical Solution", "Exact Solution"])
-
-# <headingcell level=2>
+plt.show()
 
 # Convergence
-
-# <codecell>
 
 #increment array
 dt_values=numpy.array([0.1,0.05,0.01,0.005,0.001,0.0001])
@@ -137,11 +86,7 @@ for i, dt in enumerate(dt_values): #enemurate assigns index to each array locati
         
     z_values[i]=z.copy()
 
-# <headingcell level=2>
-
 # Define Error Function
-
-# <codecell>
 
 def get_error(z,dt):
     """Returns the error relative to analytical solution using L-1 norm.
@@ -165,11 +110,7 @@ def get_error(z,dt):
     
     return dt * numpy.sum(numpy.abs(z-z_exact))
 
-# <headingcell level=2>
-
 # Calculate Error
-
-# <codecell>
 
 error_values = numpy.empty_like(dt_values)
 
@@ -184,7 +125,4 @@ plt.xlabel('$\Delta t$', fontsize=16)  #x label
 plt.ylabel('Error', fontsize=16)       #y label
 plt.loglog(dt_values, error_values, 'ko-')  #log-log plot
 plt.axis('equal')                      #make axes scale equally;
-
-# <codecell>
-
-
+plt.show()
