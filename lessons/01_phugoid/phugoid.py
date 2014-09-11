@@ -1,17 +1,17 @@
 # Script to plot the flight path of the phugoid using Lanchester's model.
-# It uses the sign convention and formulae provided by Lanchester (1909).
+# It uses the sign convention and formulae provided by Milne-Thomson (1958).
 
 import numpy
 import matplotlib.pyplot as plt
 
-def radius_of_curvature(y, yt, C):
+def radius_of_curvature(z, zt, C):
     """Returns the radius of curvature of the flight path at any point.
     
     Parameters
     ---------
-    y : float
+    z : float
         current depth below the reference horizontal line.
-    yt : float
+    zt : float
         initial depth below the reference horizontal line.
     C : float
         constant of integration.
@@ -21,22 +21,21 @@ def radius_of_curvature(y, yt, C):
     radius : float
         radius of curvature.
     """
-    #return 2./(C*(1./y)**1.5 - 2./3./yt)
-    return -1*yt / (1./3 - C/2.*(yt/y)**1.5)
+    return zt / (1./3 - C/2.*(zt/z)**1.5)
 
-def rotate(x, y, xCenter, yCenter, angle):
+def rotate(x, z, xCenter, zCenter, angle):
     """Returns the new position of the point.
 
     Parameters
     ---------
     x : float
         previous x-position of the point
-    y : float
-        previous y-position of the point.
+    z : float
+        previous z-position of the point.
     xCenter : float
         x-location of the center of rotation.
-    yCenter : float
-        y-location of the center of rotation.
+    zCenter : float
+        z-location of the center of rotation.
     angle : float
         angle of rotation
 
@@ -44,23 +43,24 @@ def rotate(x, y, xCenter, yCenter, angle):
     -------
     xCenter_new : float
         new x-location of the center of rotation.
-    yCenter_new : float
-        new y-location of the center of rotation.
+    zCenter_new : float
+        new z-location of the center of rotation.
     """
     dx = x - xCenter
-    dy = y - yCenter
-    xNew = dx*numpy.cos(angle) - dy*numpy.sin(angle)
-    yNew = dx*numpy.sin(angle) + dy*numpy.cos(angle)
-    return xCenter + xNew, yCenter + yNew
+    dz = z - zCenter
+    # the following formulae take into account the orientation of the axes
+    xNew = dx*numpy.cos(angle) + dz*numpy.sin(angle)
+    zNew = -dx*numpy.sin(angle) + dz*numpy.cos(angle)
+    return xCenter + xNew, zCenter + zNew
 
-def plot_flight_path(yt, y0, theta0):
+def plot_flight_path(zt, z0, theta0):
     """Plots the flight path.
 
     Parameters
     ---------
-    yt : float
+    zt : float
         trim height of the glider.
-    y0 : float
+    z0 : float
         initial height of the glider.
     theta0 : float
         initial orientation of the glider.
@@ -71,33 +71,33 @@ def plot_flight_path(yt, y0, theta0):
     """
     # arrays to store the coordinates of the flight path
     N = 1000
-    y = numpy.zeros(N)
+    z = numpy.zeros(N)
     x = numpy.zeros(N)
 
     # set initial conditions
-    y[0] = y0
+    z[0] = z0
     x[0] = 0.
     theta = theta0
 
     # calculate the constant C
-    #C = numpy.sqrt(y[0])*(numpy.cos(theta) - y[0]/yt/3.)
-    C = (numpy.cos(theta) - 1./3*y[0]/yt)*(y[0]/yt)**.5
+    C = (numpy.cos(theta) - 1./3*z[0]/zt)*(z[0]/zt)**.5
 
     # incremental distance along the flight path
     ds = 1 
         
     #obtain the curve coordinates
     for i in range(1,N):
-        normal = numpy.array([numpy.cos(theta+numpy.pi/2.), numpy.sin(theta+numpy.pi/2.)])
-        R = radius_of_curvature(y[i-1], yt, C)
-        center = numpy.array([x[i-1]+normal[0]*R, y[i-1]+normal[1]*R])
+        # minus sign for the second coordinate because the z-axis points downwards
+        normal = numpy.array([numpy.cos(theta+numpy.pi/2.), -numpy.sin(theta+numpy.pi/2.)])
+        R = radius_of_curvature(z[i-1], zt, C)
+        center = numpy.array([x[i-1]+normal[0]*R, z[i-1]+normal[1]*R])
         dtheta = ds/R
-        x[i], y[i] = rotate(x[i-1], y[i-1], center[0], center[1], dtheta)
+        x[i], z[i] = rotate(x[i-1], z[i-1], center[0], center[1], dtheta)
         theta = theta + dtheta
 
     # generate a plot
     plt.figure(figsize=(10,6))
-    plt.plot(x, -y, color = 'k', ls='-', lw=2.0, label="$z_t=\ %.1f,\\,z_1=\ %.1f,\\,\\theta_1=\ %.2f$" % (yt, y[0], theta0))
+    plt.plot(x, -z, color = 'k', ls='-', lw=2.0, label="$z_t=\ %.1f,\\,z_0=\ %.1f,\\,\\theta_0=\ %.2f$" % (zt, z[0], theta0))
     plt.axis('equal')
     plt.title("Flight path for $C$ = %.3f" % C, fontsize=18)
     plt.xlabel("$x$", fontsize=18)
