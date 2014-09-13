@@ -1,3 +1,4 @@
+###An attempt at
 #Practical Numerical Methods in Python
 
 A multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. Collaboratively developed by:
@@ -5,6 +6,8 @@ A multi-campus, connected course (plus MOOC) on numerical methods for differenti
 - Ian Hawke, Soutahmpton University, UK
 - Carlos Jerez, Pontificia Universidad Catolica de Chile
 - David Ketcheson, King Abdullah University of Science and Technology (KAUST), Saudi Arabia
+
+Unfortunately, David's course was cancelled and he had to bail out of the MOOC too.
 
 ##List of Modules
 
