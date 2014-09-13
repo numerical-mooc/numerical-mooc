@@ -6,6 +6,8 @@ A multi-campus, connected course (plus MOOC) on numerical methods for differenti
 - Carlos Jerez, Pontificia Universidad Catolica de Chile
 - David Ketcheson, King Abdullah University of Science and Technology (KAUST), Saudi Arabia
 
+Unfortunately, David's course was cancelled and he had to bail out of the MOOC.
+
 ##List of Modules
 
 1. **The phugoid model of glider flight.**
