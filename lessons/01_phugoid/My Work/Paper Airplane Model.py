@@ -16,8 +16,8 @@ C_D = 1/5.0
 C_L = 1.0 #C_L/C_D = L/D --> 5
 
 #####IC's
-v_0 = np.linspace(v_t,1.5*v_t,10)
-theta_0 = np.linspace(0,pi/4.0,10)
+v_0 = np.linspace(v_t,1.75*v_t,100)
+theta_0 = np.linspace(-pi/4,pi/4.0,100)
 x_0 = 0.0
 y_0 = 2.3 #initial throw height
 
@@ -77,36 +77,35 @@ def trajectory(v_0,theta_0,x_0,y_0,N):
         if u[n+1,3] <= 0:
             break
     return u,n
-            
+                      
 #time stepping set-up
 T = 100.0   #end time
 dt = 0.05    #time step size
 N = int(T/dt) + 1 #total time steps
 t=np.linspace(0.0,T,N)
 
-color=['k-','b-','r-','g-','y-','m-','c-','r-','b-','k-']
+dist = np.zeros(100)
 
-for k in range(10):    
-    [u,n] = trajectory(v_0[k],theta_0[5],x_0,y_0,N)
-    x_path= u[0:n,2]
-    y_path= u[0:n,3]
-    plt.figure
-    plt.grid(True)
-    plt.xlabel(r'x', fontsize=18)
-    plt.ylabel(r'y', fontsize=18)
-    plt.title('Varying Velocity Glider Trajectory, flight time = %.2f' % T, fontsize=16)
-    plt.plot(x_path,y_path, color[k], lw=2);
-    plt.show()
-
+for k in range(100):
+    for q in range(100):
+        [u,n] = trajectory(v_0[k],theta_0[q],x_0,y_0,N)
+        x_path= u[0:n,2].copy()
+        y_path= u[0:n,3].copy()
+        print y_path
+        if q == 0:
+            bestx = x_path.copy()
+            besty = y_path.copy()
+        else:
+            if len(y_path) > len(besty):
+                bestx = x_path.copy()
+                besty = y_path.copy()
+                v_best = v_0[k]
+                theta_best = theta_0[q]*(180.0/pi)
+                                
 plt.figure()
-for k in range(10):    
-    [u,n] = trajectory(v_0[0],theta_0[k],x_0,y_0,N)
-    x_path= u[0:n,2]
-    y_path= u[0:n,3]
-    plt.figure
-    plt.grid(True)
-    plt.xlabel(r'x', fontsize=18)
-    plt.ylabel(r'y', fontsize=18)
-    plt.title('Varying Theta Glider Trajectory, flight time = %.2f' % T, fontsize=16)
-    plt.plot(x_path,y_path, color[k], lw=2);
-    plt.show()
+plt.grid(True)
+plt.xlabel(r'x (m)', fontsize=18)
+plt.ylabel(r'y (m)', fontsize=18)
+plt.title('Airplane Trajectory v_0 = %.2f m/s theta_0 = %.2f degrees' %(v_best,theta_best), fontsize=14)
+plt.plot(bestx,besty, 'k-', lw=2);
+plt.show()
