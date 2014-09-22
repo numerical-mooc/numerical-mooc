@@ -16,10 +16,10 @@ C_D = 1/5.0
 C_L = 1.0 #C_L/C_D = L/D --> 5
 
 #####IC's
-v_0 = np.linspace(v_t,1.75*v_t,100)
+v_0 = np.linspace(v_t,1.5*v_t,100)
 theta_0 = np.linspace(-pi/4,pi/4.0,100)
 x_0 = 0.0
-y_0 = 2.3 #initial throw height
+y_0 = 1.5 #initial throw height
 
 #need to solve right hand side of ode's aka f(u) matrix
 
@@ -80,7 +80,7 @@ def trajectory(v_0,theta_0,x_0,y_0,N):
                       
 #time stepping set-up
 T = 100.0   #end time
-dt = 0.05    #time step size
+dt = 0.1    #time step size
 N = int(T/dt) + 1 #total time steps
 t=np.linspace(0.0,T,N)
 
