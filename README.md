@@ -27,3 +27,4 @@ Laplace and Poisson equations (steps 9 and 10 of “CFD Python”), explained as
 Weak and boundary integral formulation of elliptic partial differential equations; the free space Green's function. Boundary discretization: basis functions; collocation and Galerkin systems. The BEM stiffness matrix: dense versus sparse;  matrix conditioning. Solving the BEM system: singular and near-singular integrals; Gauss quadrature integration.
 7. **Tsunami: Shallow-water equation with finite volume method.**
 1D first … 2D problem with HPC solution (Python parallel or CUDA Python) -- *optional*.
+
