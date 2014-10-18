@@ -7,6 +7,8 @@ A multi-campus, connected course (plus MOOC) on numerical methods for differenti
 
 **Note:** David Ketcheson, from King Abdullah University of Science and Technology (KAUST), Saudi Arabia was going to be our fourth partner, but unfortunately the local course at KAUST got cancelled due to low enrollment.
 
+####Find the list of IPython Notebooks, with links to nbviewer, in the [Wiki](https://github.com/numerical-mooc/numerical-mooc/wiki).
+
 ##List of Modules
 
 1. **The phugoid model of glider flight.**
@@ -24,4 +26,5 @@ Laplace and Poisson equations (steps 9 and 10 of “CFD Python”), explained as
 6. **Boundaries take over: the boundary element method (BEM).**
 Weak and boundary integral formulation of elliptic partial differential equations; the free space Green's function. Boundary discretization: basis functions; collocation and Galerkin systems. The BEM stiffness matrix: dense versus sparse;  matrix conditioning. Solving the BEM system: singular and near-singular integrals; Gauss quadrature integration.
 7. **Tsunami: Shallow-water equation with finite volume method.**
-1D first … 2D problem with HPC solution (Python parallel or CUDA Python) -- See [Issue #5](https://github.com/barbagroup/numerical-mooc/issues/5).
+1D first … 2D problem with HPC solution (Python parallel or CUDA Python) -- *optional*.
+
