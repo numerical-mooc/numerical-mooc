@@ -18,6 +18,7 @@ Completion of this module in the online course platform can earn the learner the
 The earner of this badge has completed Module 2 of the course "Practical Numerical Methods with Python." This module lays the foundation for the numerical solution of PDEs, including: one-dimensional linear convection, non-linear convection, diffusion and Burgers' equation.
 
 ###Criteria: What needs to be done to earn it?
+To earn this badge, the earner needs to complete the graded assessment in the course platform including: answering quiz about stencils of numerical schemes; answering quiz questions about stability and using sympy; completing the individual coding assignment "Traffic flow" and answering the numeric questions online
 
 ###Evidence: Website (link to original digital content)
 Desirable: link to the earner's GitHub repository containing the solution to the "Rocket flight" coding assignment. Optional: link to the earner's GitHub repo containing other codes, following the lesson.
