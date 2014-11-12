@@ -21,7 +21,7 @@ The earner of this badge has completed Module 2 of the course "Practical Numeric
 To earn this badge, the earner needs to complete the graded assessment in the course platform including: answering quiz about stencils of numerical schemes; answering quiz questions about stability and using sympy; completing the individual coding assignment "Traffic flow" and answering the numeric questions online
 
 ###Evidence: Website (link to original digital content)
-Desirable: link to the earner's GitHub repository containing the solution to the "Rocket flight" coding assignment. Optional: link to the earner's GitHub repo containing other codes, following the lesson.
+Desirable: link to the earner's GitHub repository containing the solution to the "Traffic flow" coding assignment. Optional: link to the earner's GitHub repo containing other codes, following the lesson.
 
 ###Category:
 Higher education, graduate
