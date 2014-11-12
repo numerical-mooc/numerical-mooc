@@ -24,6 +24,7 @@ To earn this badge, the earner needs to complete the graded assessment in the co
 ###Evidence: Website (link to original digital content)
 
 Desirable: link to the earner's GitHub repository containing the solution to the "Rocket flight" coding assignment.
+Optional: link to the earner's GitHub repo containing other codes, following the lesson.
 
 ###Category: 
 
