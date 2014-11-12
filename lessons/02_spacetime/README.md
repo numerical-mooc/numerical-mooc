@@ -15,6 +15,8 @@ Completion of this module in the online course platform can earn the learner the
 
 ###Description: What does this badge represent?
 
+The earner of this badge has completed Module 2 of the course "Practical Numerical Methods with Python." This module lays the foundation for the numerical solution of PDEs, including: one-dimensional linear convection, non-linear convection, diffusion and Burgers' equation.
+
 ###Criteria: What needs to be done to earn it?
 
 ###Evidence: Website (link to original digital content)
@@ -29,5 +31,7 @@ engineering, computation, higher education, numericalmooc
 ###Relevant Links: Is there more information on the web?
 
 [Course About page](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about)
+
 [Course wiki](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/wiki/GW.MAE6286.2014_fall/)
+
 [Course GitHub repo](https://github.com/numerical-mooc/numerical-mooc)
