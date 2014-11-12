@@ -4,7 +4,39 @@
 
 The phugoid model motivates the learning of numerical time integration methods. The model is described by a set of two nonlinear ordinary differential equations, representing the oscillatory trajectory of an aircraft subject to longitudinal perturbations.
 
-Lesson 1 presents the physics of phugoids in the assumption of zero drag (following Lanchester, 1909). Plotting the flight path gives fascinating curve shapes. 
-Lesson 2 develops a single-equation model for zero-drag oscillations, leading to simple harmonic motion. The lesson defines initial-value problems, demonstrates Euler's method, and uses the exact solution to study the numerical convergence. 
-Lesson 3 develops the full phugoid model and solves it with (vectorized) Euler's method. In the absence of an exact solution, the study of convergence uses a grid-refinement method, obtaining the observed order of convergence. The lesson ends with the paper-airplane challenge.
-Lesson 4 starts with the screencast "Euler's method is a first-order method" and develops second-order methods: explicity midpoint (modified Euler) and Runge-Kutta. It ends with a grid-refinement study.
+* Lesson 1 presents the physics of phugoids in the assumption of zero drag (following Lanchester, 1909). Plotting the flight path gives fascinating curve shapes. 
+* Lesson 2 develops a single-equation model for zero-drag oscillations, leading to simple harmonic motion. The lesson defines initial-value problems, demonstrates Euler's method, and uses the exact solution to study the numerical convergence. 
+* Lesson 3 develops the full phugoid model and solves it with (vectorized) Euler's method. In the absence of an exact solution, the study of convergence uses a grid-refinement method, obtaining the observed order of convergence. The lesson ends with the paper-airplane challenge.
+* Lesson 4 starts with the screencast "Euler's method is a first-order method" and develops second-order methods: explicity midpoint (modified Euler) and Runge-Kutta. It ends with a grid-refinement study.
+
+##Badge earning
+
+Conpletion of this module in the online course platform can earn the learner the Module 1 badge.
+
+###Description: What does this badge represent?
+
+The earner completed Module 1 "The phugoid model of glider flight" of the course "Practical Numerical Methods with Python" (a.k.a., numericalmooc). 
+
+###Criteria: What needs to be done to earn it?
+
+To earn this badge, the earner needs to complete the graded assessment in the course platform including: answering quiz about basic numerical Python commands; answering quiz about basics of initial-value problems; completing the individual coding assignment "Rocket flight" and answering the numeric questions online.
+
+###Evidence: Website (link to original digital content)
+
+Desirable: link to the earner's GitHub repository containing the solution to the "Rocket flight" coding assignment.
+
+###Category: 
+
+Higher education, graduate
+
+###Tags: 
+
+engineering, computation, higher education, numericalmooc
+
+###Relevant Links: Is there more information on the web?
+
+[Course About page](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about)
+
+[Course Wiki](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/wiki/GW.MAE6286.2014_fall/)
+
+[Course GitHub repo](https://github.com/numerical-mooc/numerical-mooc)
