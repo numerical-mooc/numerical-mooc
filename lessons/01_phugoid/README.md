@@ -19,7 +19,7 @@ The earner completed Module 1 "The phugoid model of glider flight" of the course
 
 ###Criteria: What needs to be done to earn it?
 
-To earn this badge, the earner needs to complete the graded assessment in the course platform including: answering quiz about basic numerical Python commands; answering quiz about basics of initial-value problems; completing the individual coding assignment "Rocket flight" and answering the numeric questions online.
+To earn this badge, the earner needs to complete the graded assessment in the course platform including: answering quiz about basic numerical Python commands; answering quiz about basics of initial-value problems; completing the individual coding assignment "Rocket flight" and answering the numeric questions online. Earners should also have completed self-study of the four module lessons, by reading, reflecting on and writing their own version of the codes. This is not directly assessed, but it is assumed. Thus, earners are encouraged to provide evidence of this self-study by giving links to their code repositories or other learning objects they created in the process.
 
 ###Evidence: Website (link to original digital content)
 
