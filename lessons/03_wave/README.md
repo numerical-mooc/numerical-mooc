@@ -26,7 +26,7 @@ The earner completed Module 3 of the course "Practical Numerical Methods with Py
 ###Criteria: What needs to be done to earn it?
 To earn this badge, the learner needs to complete the graded assessment in the course platform including: 
 answering quiz questions involving symbolic calculations with the improved traffic model, and additional SymPy practice;
-answering quiz questions on of convergence and truncation error; 
+answering quiz questions on convergence and truncation error; 
 completing the individual coding assignment using "Sod's shock-tube" problem and answering the numeric questions online.
 Earners should also have completed self-study of the four module lessons, by reading, reflecting on and writing their own version of the codes. This is not directly assessed, but it is assumed. Thus, earners are encouraged to provide evidence of this self-study by giving links to their code repositories or other learning objects they created in the process.
 
