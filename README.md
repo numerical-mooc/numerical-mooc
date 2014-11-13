@@ -11,7 +11,7 @@ A multi-campus, connected course (plus MOOC) on numerical methods for differenti
 
 ##List of Modules
 
-1. **The phugoid model of glider flight.**
+1. [**The phugoid model of glider flight.**](https://github.com/numerical-mooc/numerical-mooc/tree/master/lessons/01_phugoid)
 Described by a set of two nonlinear ordinary differential equations, the phugoid model motivates numerical time integration methods, and we build it up starting from one simple equation, so that the unit can include 3 or 4 lessons  on initial value problems. This includes: a) Euler's method, 2nd-order RK, and leapfrog; b) consistency, convergence testing, local vs. global error; c) stability
 Computational techniques: array operations with NumPy; symbolic computing with SymPy; ODE integrators and libraries; writing and using functions.
 2. **Space and Time—Introduction to finite-difference solutions of PDEs.**
