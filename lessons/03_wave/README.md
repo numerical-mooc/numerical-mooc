@@ -37,7 +37,7 @@ Desirable: link to the earner's GitHub repository (or equivalent) containing the
 Higher education, graduate
 
 ###Tags:
-engineering, computation, higher education, numericalmooc
+engineering, computation, higher education, numericalmooc, python, gwu, george washington university, lorena barba, github
 
 ###Relevant Links: Is there more information on the web?
 
