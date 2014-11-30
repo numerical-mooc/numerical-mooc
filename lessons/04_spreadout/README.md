@@ -3,15 +3,15 @@
 ## Summary
 This module focuses on solution of parabolic PDEs, like the diffusion equation. It introduces for the first time implicit methods and covers both one- and two-dimensional problems.
 
-* Lesson 1 develops a 1D heat-conduction problem and its solution by means of a forward-time/centered-space scheme. It discusses in detail Dirichlet and Neumann boundary conditions, looking at their implementation in code. At the end, it touches on boundary condition and time step limits with explicit schemes.
+* [Lesson 1](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/01_Heat_Equation_1D_Explicit.ipynb) develops a 1D heat-conduction problem and its solution by means of a forward-time/centered-space scheme. It discusses in detail Dirichlet and Neumann boundary conditions, looking at their implementation in code. At the end, it touches on boundary condition and time step limits with explicit schemes.
 
-* Lesson 2 introduces implicit schemes for the first time: it develops the implicit discretization of the 1D heat equation and discusses boundary conditions in detail.
+* [Lesson 2](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/02_Heat_Equation_1D_Implicit.ipynb) introduces implicit schemes for the first time: it develops the implicit discretization of the 1D heat equation and discusses boundary conditions in detail.
 
-* In lesson 3 we graduate to two dimensions! A 2D heat-conduction problem is described, representing a computer microchip, and is solved with an explicit scheme. The lesson covers boundary conditions in 2D and array-storage decisions.
+* In [lesson ](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/03_Heat_Equation_2D_Explicit.ipynb) we graduate to two dimensions! A 2D heat-conduction problem is described, representing a computer microchip, and is solved with an explicit scheme. The lesson covers boundary conditions in 2D and array-storage decisions.
 
-* Lesson 4 develops the implicit solution of 2D heat conduction, explaining in detail how to construct the coefficient matrix and the various combinations of boundary conditions.
+* [Lesson 4](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/04_Heat_Equation_2D_Implicit.ipynb) develops the implicit solution of 2D heat conduction, explaining in detail how to construct the coefficient matrix and the various combinations of boundary conditions.
 
-* Lesson 5 is dedicated to the Crank-Nicolson scheme, including a study of spatial and time accuracy and convergence.
+* [Lesson 5](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/05_Crank-Nicolson.ipynb) is dedicated to the Crank-Nicolson scheme, including a study of spatial and time accuracy and convergence.
 
 ##Badge earning
 Completion of this module in the online course platform can earn the learner the Module 4 badge.
