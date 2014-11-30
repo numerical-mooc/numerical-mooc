@@ -5,17 +5,17 @@
 
 This module explores in depth the solution of transport problems and conservation laws using numerical methods.
 
-* Lesson 1 discusses the meaning and mathematical representation of a conservation law. 
+* [Lesson 1](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/03_wave/03_01_conservationLaw.ipynb) discusses the meaning and mathematical representation of a conservation law. 
 The application that will motivate this module is traffic flow, and it is described here.
 The first problem to tackle is the impulsive start of traffic upon a red light turning green.
 But instability develops wiith the simple forward-time/backward-space scheme: we need upwind methods.
 
-* Lesson 2 moves on to a red-light problem, creating a back-moving shock wave. The lesson explores different numerical schemes:
+* [Lesson 2](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/03_wave/03_02_convectionSchemes.ipynb) moves on to a red-light problem, creating a back-moving shock wave. The lesson explores different numerical schemes:
 Lax-Friedrichs, Lax-Wendroff and MacCormack.
 
-* Lesson 3 focuses on an improved model for traffic flow, requiring symbolic calculations (with SymPy).
+* [Lesson 3](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/03_wave/03_03_aBetterModel.ipynb) focuses on an improved model for traffic flow, requiring symbolic calculations (with SymPy).
 
-* Lesson 4 is an introduction to the finite-volume method, including study of the conservative discretization, Godunov's method and the MUSCL method.
+* [Lesson 4](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/03_wave/03_04_MUSCL.ipynb) is an introduction to the finite-volume method, including study of the conservative discretization, Godunov's method and the MUSCL method.
 
 ##Badge earning
 Completion of this module in the online course platform can earn the learner the Module 3 badge.
