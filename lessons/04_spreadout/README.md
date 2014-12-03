@@ -7,7 +7,7 @@ This module focuses on solution of parabolic PDEs, like the diffusion equation. 
 
 * [Lesson 2](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/02_Heat_Equation_1D_Implicit.ipynb) introduces implicit schemes for the first time: it develops the implicit discretization of the 1D heat equation and discusses boundary conditions in detail.
 
-* In [lesson ](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/03_Heat_Equation_2D_Explicit.ipynb) we graduate to two dimensions! A 2D heat-conduction problem is described, representing a computer microchip, and is solved with an explicit scheme. The lesson covers boundary conditions in 2D and array-storage decisions.
+* In [lesson 3](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/03_Heat_Equation_2D_Explicit.ipynb) we graduate to two dimensions! A 2D heat-conduction problem is described, representing a computer microchip, and is solved with an explicit scheme. The lesson covers boundary conditions in 2D and array-storage decisions.
 
 * [Lesson 4](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/04_Heat_Equation_2D_Implicit.ipynb) develops the implicit solution of 2D heat conduction, explaining in detail how to construct the coefficient matrix and the various combinations of boundary conditions.
 
