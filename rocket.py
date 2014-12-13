@@ -128,7 +128,7 @@ u[0] = np.array([0,0])
 
 
 
-
+# Solve
 
 for n in range(0,N-1):
     u[n+1] = euler_step(u[n],f,dt,mp[n],mpdot[n])
@@ -157,8 +157,8 @@ plotit = 1
 if plotit == 1:
     plt.figure()
     plt.plot(t,u[:,0])
-#    plt.ylim(0,200)
     plt.xlim(0,Tmax)
+
     plt.figure()
     plt.plot(t,u[:,1])
    # plt.ylim(0,200)
