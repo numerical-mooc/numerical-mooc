@@ -21,8 +21,8 @@ from scipy import linspace, polyval, polyfit, sqrt, stats, randn
 import sympy
 from sympy.utilities.lambdify import lambdify
 
-from JSAnimation.IPython_display import display_animation
-from matplotlib import animation
+#from JSAnimation.IPython_display import display_animation
+#from matplotlib import animation
 
 pub = 0
 if pub == 1:
@@ -59,42 +59,62 @@ np.set_printoptions(edgeitems=10,linewidth=300)
 doit = 1
 if doit == 1:
     #convection - traffic problem
-    nx = 51  # try changing this number from 41 to 81 and Run All ... what happens?
-    dx = 2./(nx-1)
-    nt = 25    
+    nx = 51
+    L = 11.
+    dx = L/(nx-1.)
+    nt = 60    
     dt = .001  
-    c = 1.      #assume wavespeed of c = 1
-    L = 11
+    
     rho_max = 250
     V_max = 80
+
+#    print (dt/dx)
     
     x = np.linspace(0,L,nx)
-    rho0 = np.ones(nx)*10
-    rho0[10:20] = 50
+    rho = np.ones(nx)*10.
+    rho[10:20] = 50.
+ #   rho = np.ones(nx)
+    V =  V_max *(1 - rho/rho_max)
+    print 'Vmin at time zero = %f'%np.min(V)
 
+    plotit = 0
+    if plotit ==1:
+        plt.figure()
+        plt.plot(x,rho,'b')
+        plt.figure()
+        plt.plot(x,V,'b')
+        plt.show()
+        plt.close()
 
-    u = np.ones(nx)      #numpy function ones()
-    u[.5/dx : 1/dx+1]=2  #setting u = 2 between 0.5 and 1 as per our I.C.s
-    print(u)
+    for n in range(1,nt):
+        rhon = rho.copy()
+        rho[1:] = rhon[1:] - (dt/dx)*(V_max-V_max*2*rhon[1:]/rho_max)*(rhon[1:]-rhon[0:-1])
+        rho[0] = 10
+        V = V_max *(1 - rho/rho_max)
+        print 'Time = %f [min], Vmin = %f'%(dt*n*60., np.mean(V))
 
+        plotit = 0
+        if plotit == 1:
+            plt.figure()
+           # plt.plot(x,rho)
+            plt.plot(x,V)
+            plt.show()
+            plt.close()
 
-
-    for n in range(1,nt):  
-        un = u.copy() 
-        for i in range(1,nx): 
-    
-            u[i] = un[i]-c*dt/dx*(un[i]-un[i-1])
-
+    V = V_max *(1 - rho/rho_max)
     plotit = 1
     if plotit == 1:
         plt.figure()
-        plt.plot(np.linspace(0,2,nx), u, color='#003366', ls='--', lw=3)
-        plt.ylim(0,2.5);
+        plt.plot(x,rho,'d')
+     #   plt.plot(x,V,'d')
+     #   plt.ylim(-1000,1000)
         plt.show()
         plt.close()
 
 
-doit = 1
+
+
+doit = 0
 if doit == 1:
     #convection
     nx = 41  # try changing this number from 41 to 81 and Run All ... what happens?
