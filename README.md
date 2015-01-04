@@ -1,5 +1,9 @@
 #Practical Numerical Methods with Python
 
+Kevin's first new line
+
+lorem ipsum dolor sit amet
+
 A multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. Collaboratively developed by:
 - [Lorena A. Barba](http://lorenabarba.com), George Washington University, USA
 - Ian Hawke, Southampton University, UK
