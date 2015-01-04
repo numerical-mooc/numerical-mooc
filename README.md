@@ -8,7 +8,7 @@ A multi-campus, connected course (plus MOOC) on numerical methods for differenti
 **Note:** David Ketcheson, from King Abdullah University of Science and Technology (KAUST), Saudi Arabia was going to be our fourth partner, but unfortunately the local course at KAUST got cancelled due to low enrollment.
 
 [**"Practical Numerical Methods with Python"**](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about) is an open, online course hosted on an independent installation of the [Open edX](http://code.edx.org) software platform for MOOCs.
-The MOOC (massive open online course) is ran by Prof. Barba at the George Washington University, while each instructor is running a local course, for credit at their institution. You can register for the MOOC at any time in the [GW Online Open edX](http://openedx.seas.gwu.edu/) platform to experience the complete course (including quizzes, examples and discussion board). 
+The MOOC (massive open online course) is being run by Prof. Barba at the George Washington University, while each instructor is running a local course, for credit at their institution. You can register for the MOOC at any time in the [GW Online Open edX](http://openedx.seas.gwu.edu/) platform to experience the complete course (including quizzes, examples and discussion board). 
 
 All content is open —really open, i.e., you can use, share, mod, remix— and most is available outside the course platform also (on GitHub and YouTube).
 
