@@ -13,8 +13,8 @@
    height="246.75702"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="injection.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="full_weighting.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,12 +24,12 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
      inkscape:cx="300.69189"
-     inkscape:cy="289.05317"
+     inkscape:cy="174.76746"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1912"
-     inkscape:window-height="1058"
+     inkscape:window-width="1366"
+     inkscape:window-height="733"
      inkscape:window-x="0"
      inkscape:window-y="14"
      inkscape:window-maximized="0"
@@ -300,7 +300,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -426,31 +426,18 @@
          d="m 414.2857,134.86218 0,40"
          style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
-    <flowRoot
+    <text
        xml:space="preserve"
-       id="flowRoot4500"
-       style="font-size:14.17353249px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nixie One;-inkscape-font-specification:Nixie One"
-       transform="matrix(1.4110808,0,0,1.4110808,-6.7275065,-12.296675)"><flowRegion
-         id="flowRegion4502"><rect
-           id="rect4504"
-           width="73.571426"
-           height="31.428572"
-           x="7.1428571"
-           y="41.647896"
-           style="font-size:14.17353249px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nixie One;-inkscape-font-specification:Nixie One" /></flowRegion><flowPara
-         id="flowPara4506"
-         style="font-size:14.17353249px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nixie One;-inkscape-font-specification:Nixie One">Fine Grid</flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Linux Biolinum;-inkscape-font-specification:Linux Biolinum"
-       x="-24.285715"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="-26.719421"
        y="202.21933"
        id="text4508"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4510"
-         x="-24.285715"
+         x="-26.719421"
          y="202.21933"
-         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Nixie One;-inkscape-font-specification:Nixie One">Coarse Grid</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Nixie One';-inkscape-font-specification:'Nixie One'">Coarse Grid</tspan></text>
     <g
        id="g3089"
        transform="matrix(0.43536047,0,0,0.43536047,191.97047,-126.39599)">
@@ -942,6 +929,18 @@
          d="m 225.77782,85.95251 c 0,0 -5.35715,65 -21.42858,93.92857"
          style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 4;stroke-dashoffset:0;marker-end:url(#Arrow1Mend-2-68)" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:125%;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="-5.3131709"
+       y="65.524277"
+       id="text4508-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4510-3"
+         x="-5.3131709"
+         y="65.524277"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Nixie One';-inkscape-font-specification:'Nixie One'">Fine Grid</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -956,7 +955,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(55.041053,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -966,7 +965,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(92.726197,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -976,7 +975,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(130.41135,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -986,7 +985,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(168.09649,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -996,7 +995,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(205.78165,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -1006,7 +1005,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(281.15195,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -1016,7 +1015,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(318.83711,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -1026,7 +1025,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(431.76625,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -1036,7 +1035,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(243.46681,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -1046,7 +1045,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(356.52225,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -1056,7 +1055,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 c 0,3.74765 -3.038064,6.785718 -6.78571,6.785718 -3.747647,0 -6.785715,-3.038068 -6.785715,-6.785718 0,-3.74764 3.038068,-6.78571 6.785715,-6.78571 3.747646,0 6.78571,3.03807 6.78571,6.78571 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(394.08113,165.71428)" />
     <path
        sodipodi:type="arc"
@@ -1066,7 +1065,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 1 1 -13.571425,0 6.7857141,6.7857141 0 1 1 13.571425,0 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(92.78934,301.07142)" />
     <path
        sodipodi:type="arc"
@@ -1076,7 +1075,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 1 1 -13.571425,0 6.7857141,6.7857141 0 1 1 13.571425,0 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(168.15963,301.07142)" />
     <path
        sodipodi:type="arc"
@@ -1086,7 +1085,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 1 1 -13.571425,0 6.7857141,6.7857141 0 1 1 13.571425,0 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(318.90026,301.07142)" />
     <path
        sodipodi:type="arc"
@@ -1096,7 +1095,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 1 1 -13.571425,0 6.7857141,6.7857141 0 1 1 13.571425,0 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(243.52995,301.07142)" />
     <path
        sodipodi:type="arc"
@@ -1106,7 +1105,7 @@
        sodipodi:cy="-105.8521"
        sodipodi:rx="6.7857141"
        sodipodi:ry="6.7857141"
-       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 1 1 -13.571425,0 6.7857141,6.7857141 0 1 1 13.571425,0 z"
+       d="m 102.14285,-105.8521 a 6.7857141,6.7857141 0 0 1 -6.78571,6.785718 6.7857141,6.7857141 0 0 1 -6.785715,-6.785718 6.7857141,6.7857141 0 0 1 6.785715,-6.78571 6.7857141,6.7857141 0 0 1 6.78571,6.78571 z"
        transform="translate(394.14428,301.07142)" />
     <g
        id="g6761"
