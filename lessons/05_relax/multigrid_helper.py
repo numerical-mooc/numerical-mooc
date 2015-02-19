@@ -56,8 +56,7 @@ def residual(dx, pn, b, r):
     '''
     
     # r[0] = 0
-    expr = "r[1:-1] = b[1:-1] - (pn[:-2] - 2 * pn[1:-1] + pn[2:]) / (dx * dx)"
-    weave.blitz(expr, check_size=0)
+    r[1:-1] = b[1:-1] - (pn[:-2] - 2 * pn[1:-1] + pn[2:]) / dx**2
     # r[-1] = 0
     
     return r
@@ -80,8 +79,7 @@ def full_weighting_1d(vF, vC):
     '''
     
     vC[0] = vF[0]
-    expr = "vC[1:-1] = 0.25 * (vF[1:-3:2] + 2. * vF[2:-2:2] + vF[3:-1:2]);"
-    weave.blitz(expr, check_size=0)
+    vC[1:-1] = 0.25 * (vF[1:-3:2] + 2. * vF[2:-2:2] + vF[3:-1:2])
     vC[-1] = vF[-1]
     
     return vC
@@ -103,8 +101,7 @@ def interpolation_1d(vC, vF):
     Output: vF
     '''
     
-    expr = ("vF[::2] = vC[:];" 
-            "vF[1:-1:2] = 0.5 * (vC[:-1] + vC[1:])")
-    weave.blitz(expr, check_size=0)
+    vF[::2] = vC[:];
+    vF[1:-1:2] = 0.5 * (vC[:-1] + vC[1:])
     
     return vF
