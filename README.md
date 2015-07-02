@@ -1,4 +1,4 @@
-#Practical Numerical Methods with Python
+﻿#Practical Numerical Methods with Python
 
 A multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. Collaboratively developed by:
 - [Lorena A. Barba](http://lorenabarba.com), George Washington University, USA
@@ -33,3 +33,4 @@ Weak and boundary integral formulation of elliptic partial differential equation
 7. **Tsunami: Shallow-water equation with finite volume method.**
 1D first … 2D problem with HPC solution (Python parallel or CUDA Python) -- *optional*.
 
+Feng Tian: lorem ipsum dolor sit amet...
