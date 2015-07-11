@@ -81,7 +81,7 @@ div.text_cell_render{
 .text_cell_render h3 {
     font-family: 'Nixie One', serif;
     margin-top:16px;
-	font-size: 22pt;
+    font-size: 22pt;
     font-weight: 600;
     margin-bottom: 3px;
     font-style: regular;
@@ -119,8 +119,8 @@ div.text_cell_render{
 }
 
 .CodeMirror{
-        font-family: "PT Mono";
-        font-size: 90%;
+    font-family: "PT Mono";
+    font-size: 90%;
 }
 
 </style>
