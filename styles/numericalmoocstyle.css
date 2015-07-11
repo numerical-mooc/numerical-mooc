@@ -65,7 +65,8 @@ div.text_cell_render{
     margin-bottom: 0.5em;
     margin-top: 0.5em;
     display: block;
-}	
+}
+
 .text_cell_render h2 {
     font-family: 'Nixie One', serif;
     font-weight: 400;
