@@ -26,7 +26,7 @@ div #notebook { /* centre the content */
 }
 
 #notebook li { /* More space between bullet points */
-margin-top:0.8em;
+    margin-top:0.8em;
 }
 
 /* draw border around running cells */
