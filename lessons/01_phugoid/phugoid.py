@@ -2,7 +2,12 @@
 # It uses the sign convention and formulae provided by Milne-Thomson (1958).
 
 import numpy
-import matplotlib.pyplot as plt
+from matplotlib import pyplot
+
+numpy.seterr(all='ignore')
+'''
+see http://docs.scipy.org/doc/numpy/reference/generated/numpy.seterr.html for explanation.  ignore over/underflow errors that pop up in the radius_of_curvature function
+'''
 
 def radius_of_curvature(z, zt, C):
     """Returns the radius of curvature of the flight path at any point.
@@ -21,7 +26,7 @@ def radius_of_curvature(z, zt, C):
     radius : float
         radius of curvature.
     """
-    return zt / (1./3 - C/2.*(zt/z)**1.5)
+    return zt / (1/3 - C/2*(zt/z)**1.5)
 
 def rotate(x, z, xCenter, zCenter, angle):
     """Returns the new position of the point.
@@ -80,8 +85,7 @@ def plot_flight_path(zt, z0, theta0):
     theta = theta0
 
     # calculate the constant C
-    C = (numpy.cos(theta) - 1./3*z[0]/zt)*(z[0]/zt)**.5
-
+    C = (numpy.cos(theta) - 1/3*z[0]/zt)*(z[0]/zt)**.5
     # incremental distance along the flight path
     ds = 1 
         
@@ -96,13 +100,13 @@ def plot_flight_path(zt, z0, theta0):
         theta = theta + dtheta
 
     # generate a plot
-    plt.figure(figsize=(10,6))
-    plt.plot(x, -z, color = 'k', ls='-', lw=2.0, label="$z_t=\ %.1f,\\,z_0=\ %.1f,\\,\\theta_0=\ %.2f$" % (zt, z[0], theta0))
-    plt.axis('equal')
-    plt.title("Flight path for $C$ = %.3f" % C, fontsize=18)
-    plt.xlabel("$x$", fontsize=18)
-    plt.ylabel("$z$", fontsize=18)
-    plt.legend()
-    plt.show()
+    pyplot.figure(figsize=(10,6))
+    pyplot.plot(x, -z, color = 'k', ls='-', lw=2.0, label="$z_t=\ %.1f,\\,z_0=\ %.1f,\\,\\theta_0=\ %.2f$" % (zt, z[0], theta0))
+    pyplot.axis('equal')
+    pyplot.title("Flight path for $C$ = %.3f" % C, fontsize=18)
+    pyplot.xlabel("$x$", fontsize=18)
+    pyplot.ylabel("$z$", fontsize=18)
+    pyplot.legend()
+    pyplot.show()
 
 # End of File
