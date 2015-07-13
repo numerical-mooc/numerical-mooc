@@ -1,6 +1,7 @@
 name: py3mooc
 dependencies:
 - certifi=14.05.14=py34_0
+- fastcache=1.0.2=py34_0
 - fontconfig=2.11.1=4
 - freetype=2.5.2=2
 - ipython=3.2.0=py34_0
@@ -32,6 +33,7 @@ dependencies:
 - sip=4.16.5=py34_0
 - six=1.9.0=py34_0
 - sqlite=3.8.4.1=1
+- sympy=0.7.6=py34_0
 - system=5.8=2
 - terminado=0.5=py34_0
 - tk=8.5.18=0
