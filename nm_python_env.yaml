@@ -29,6 +29,7 @@ dependencies:
 - pyzmq=14.7.0=py34_0
 - qt=4.8.6=3
 - readline=6.2=2
+- scipy=0.15.1=np19py34_0
 - setuptools=18.0.1=py34_0
 - sip=4.16.5=py34_0
 - six=1.9.0=py34_0
@@ -43,3 +44,4 @@ dependencies:
 - zlib=1.2.8=0
 - pip:
   - jsanimation==0.1
+
