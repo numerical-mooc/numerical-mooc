@@ -12,7 +12,11 @@ The MOOC (massive open online course) was run in 2014 for the first time by Prof
 
 ###Update for 2015
 
-The synchronous course at the George Washington University will run again, starting September 1st, 2015. In addition, there will be a **new site for numericalmooc** at the Physics Department of Université Libre de Bruxelles! Prof. Bernard Knaepen will be teaching his numerical methods class there, adopting the numericalmooc materials and creating new content.
+The synchronous course at the George Washington University will run again, starting September 1st, 2015. In addition, there will be a **new site for numericalmooc!**
+
+- [http://depphys.ulb.ac.be/bknaepen/](Prof. Bernard Knaepen),Physics Department, Université Libre de Bruxelles
+ 
+Prof. Knaepen will be teaching his numerical methods class at ULB, adopting the numericalmooc materials and creating new content.
 
 ### The MOOC
 
