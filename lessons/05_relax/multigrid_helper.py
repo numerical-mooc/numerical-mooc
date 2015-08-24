@@ -1,6 +1,7 @@
 import numpy
-from scipy import weave
+from numba import autojit
 
+@autojit(nopython=True)
 def poisson1d_GS_SingleItr(nx, dx, p, b):
     '''
     Gauss-Seidel method for 1D Poisson eq. with Dirichlet BCs at both 
@@ -18,8 +19,8 @@ def poisson1d_GS_SingleItr(nx, dx, p, b):
     p: 1D array of float, approximated soln. in current iteration
     '''
     
-    expr = "p[1:-1] = 0.5 * (p[:-2] + p[2:] - dx * dx * b[1:-1])"
-    weave.blitz(expr, check_size=0)
+    for i in range(1,len(p)):
+        p[i] = 0.5 * (p[i+1] + p[i-1] - dx**2 * b[i])
     
     return p
 
