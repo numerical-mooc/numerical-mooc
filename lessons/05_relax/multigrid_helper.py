@@ -19,7 +19,7 @@ def poisson1d_GS_SingleItr(nx, dx, p, b):
     p: 1D array of float, approximated soln. in current iteration
     '''
     
-    for i in range(1,len(p)):
+    for i in range(1,len(p)-1):
         p[i] = 0.5 * (p[i+1] + p[i-1] - dx**2 * b[i])
     
     return p
