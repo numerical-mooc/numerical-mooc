@@ -2,42 +2,26 @@
 
 Welcome!  The command can be one of the most powerful ways to interact with a variety of computer systems, but it can also be a little confusing at first glance.  This mini-crash-course should help familiarize you with the basics of command line usage and navigation.  
 
-##Quick config step
 
-This one bit we are asking you to do before we explain anything else.  Please open up a terminal
+##Who am I?
 
-Applications -> System Tools -> Terminal
+Time to get started!  You likely know your username since you've just logged in, but sometimes you may have multiple accounts with slight variations on a username.  
 
-Now copy the two lines below by selecting them and hitting Ctrl+c and then paste them into the terminal using Ctrl+Shift+v and hit \<Enter\>.  **Note** that Ctrl+v doesn't work, you need to add Shift.  
+First, please open up a terminal using the menu in the upper-left corner (on Red Hat) and selecting
 
-```Bash
-echo "export PATH=/opt/anaconda/bin:\$PATH" >> .bashrc
-echo "export PS1=\"\u \w \"" >> .bashrc
-```
+> Applications -> System Tools -> Terminal
 
-Now, to activate the options we just selected, type the following line in the terminal and hit \<Enter\>
-
-```Bash
-source .bashrc
-```
-
-It should look a little something like this:
-
-![image](https://gist.githubusercontent.com/gforsyth/e21639591d61e436433f/raw/7c4f02f87dbaf77d1b1ddeb662a033bc7aa5fea3/1.bashrc.gif)
-
-##`whoami`
-
-Time to get started!  You might have noticed that the prompt used to read `-bash-4.1$`.  Now it should display your username instead.  That's one of the tweaks we made above.  Not all prompts are so friendly and if you ever lose track of what user you're logged in as, you can always run
+You can always ask the terminal who you are by entering 
 
 ```Bash
 whoami
 ```
 
-to find out who you are.
+and hitting \<Enter\>.  (From now on, after typing in a command, just hit \<Enter\> unless we tell you otherwise.)
 
-![whoami](https://gist.githubusercontent.com/gforsyth/e21639591d61e436433f/raw/7a7d92d3b5dc0e1ab3f08fc72af62d59fb6463ce/2.whoami.gif)
+![whoami](./images/1.whoami.gif)
 
-##`pwd`
+##Where am I?
 
 We know who we are, time to find out *where* we are.  You can always find out what folder you're in by using the "print working directory" command, or `pwd`.  Try it out!
 
@@ -45,11 +29,11 @@ We know who we are, time to find out *where* we are.  You can always find out wh
 pwd
 ```
 
-![pwd](https://gist.githubusercontent.com/gforsyth/e21639591d61e436433f/raw/6c1efde71f8eb9cc978ebbb9332100c0ac22f486/3.pwd.gif)
+![pwd](./images/2.pwd.gif)
 
-We're in our home directory.  This is the base directory for a regular user in Linux.  In the SEAS labs, the home directory is always `/home/seas/<username>`
+We're in our home directory.  This is the base directory for a regular user in Linux.  In the SEAS labs, the home directory is always `/home/seas/<username>`.  If you're using your own Linux machine, the home directory is probably `/home/<username>`.  If you're on a Mac, the home directory is `/Users/<username>` (they like to be different).  
 
-##`ls`
+##What's in here?
 
 We know who we are and where we are, now it's time to figure out what's in here.  We use the "list" command, `ls`, to view any files or directories that are in the current folder.
 
@@ -57,25 +41,25 @@ We know who we are and where we are, now it's time to figure out what's in here.
 ls
 ```
 
-![ls](https://gist.githubusercontent.com/gforsyth/e21639591d61e436433f/raw/c3c7b6c0a087de5c3e663192382e4707b40fc50e/4.ls.gif)
+![ls](./images/3.ls.gif)
 
 The items you see above in the gif are all folders.  They're the usual folders created by default in Red Hat Linux.  Your home folder is actually the same folder as your Titan network drive on Windows, so you may have other files and folders in your home directory.  
 
-##`cd`
+##How do I go there?
 
 To navigate to a new folder, we use the change directory command, `cd`, followed by the name of the folder.  While you *can* type out the full folder name, it's usually nicer to use what's called Tab-completion.  
 
 Let's change to the `Pictures` directory.  Type `cd Pi` and then hit the TAB key to complete the directory name.  Then hit \<Enter\>
 
-Now you're in the `Pictures` directory.  It's probably empty, but you can check with `ls`.  Notice also that the command-prompt has changed to show your current location.  
+Now you're in the `Pictures` directory.  It's probably empty, but you can check with `ls`.  
 
 To go back to your home directory, type `cd ..`
 
 The `..` is a command-line shortcut to move "up" one folder in a directory tree.  Try `cd`-ing into a few other folders and then returning back to your home directory to get the hang of moving around.  
 
-![cd](https://gist.github.com/gforsyth/e21639591d61e436433f/raw/3ace959d96bf313523c1eef5f5083d9a46d14c77/5.cd.gif)
+![cd](./images/4.cd.gif)
 
-###Tab-completion
+###Multiple tab-completions
 
 If there are multiple possible completions for a partial directory name, you can ask the terminal to display them by hitting TAB twice.  Try entering
 
@@ -85,4 +69,36 @@ cd Do
 
 and then hit TAB twice to see the list of matching directories.  Then you can add a `c` and Tab-complete `Documents`.
 
-![cdtabtab](https://gist.github.com/gforsyth/e21639591d61e436433f/raw/69ffcfc51baa77ab104d10bcf547b147c0917768/6.cdtabtab.gif)
+![cdtabtab](./images/5.cdtabtab.gif)
+
+##Quick config step
+
+Now that we have a handle on basic terminal navigation, we are going to make a few tweaks to this setup to make it friendlier.  
+Copy the two lines below by selecting them and hitting Ctrl+c and then paste them into the terminal using Ctrl+Shift+v and hit \<Enter\>.  **Note** that Ctrl+v doesn't work, you need to add Shift.  
+
+```Bash
+echo "export PATH=/opt/anaconda/bin:\$PATH" >> .bashrc
+echo "export PS1=\"\u \w \"" >> .bashrc
+```
+
+(If you are following along and aren't at GW, don't copy the first line, that only applies to the GW Linux labs)
+
+Now, to activate the options we just selected, type the following line in the terminal and hit \<Enter\>
+
+```Bash
+source .bashrc
+```
+
+It should look a little something like this:
+
+![image](./images/6.bashrc.gif)
+
+##Fire up a jupyter notebook!
+
+It's time to get started!  If you're at GW then everything is already installed, just run 
+
+```Bash
+jupyter notebook
+```
+
+in a terminal and it will launch a notebook server in your browser.  If you *aren't* at GW, then see the next module in Getting Started on installing Python and Jupyter.
