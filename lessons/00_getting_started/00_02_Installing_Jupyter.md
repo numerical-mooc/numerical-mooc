@@ -15,3 +15,27 @@ First download the Anaconda installer.  Visit http://continuum.io/downloads to d
 ![anaconda](./images/anaconda.download.gif)
 
 
+###Run the installer
+
+Follow the appropriate instructions for your operating system listed on the [Anaconda Install Page](http://docs.continuum.io/anaconda/install).  For Linux users, make sure to answer "yes" when the installer asks about editing your `PATH`.
+
+![addtopath](./images/addtopath.gif)
+
+Also note that on both Linux and OSX, you have to close the current terminal window and re-open it before the Anaconda installation will be available.
+
+##2. Install Jupyter and other libraries
+
+Once Anaconda is installed, you can then use the included `conda` package to install all of the necessary packages for the course.  Open a terminal and run
+
+```Bash
+conda install jupyter numpy scipy sympy matplotlib
+```
+
+##3. Test your installation
+Once `conda` is finished you should be ready to go!  Open a terminal and run
+
+```Bash
+jupyter notebook
+```
+
+to launch a notebook server, then check out the [next guide in Getting Started]() for a walkthrough of using the notebook.
