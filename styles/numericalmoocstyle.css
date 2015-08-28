@@ -26,7 +26,7 @@ div #notebook { /* centre the content */
 }
 
 #notebook li { /* More space between bullet points */
-margin-top:0.8em;
+    margin-top:0.8em;
 }
 
 /* draw border around running cells */
@@ -65,7 +65,8 @@ div.text_cell_render{
     margin-bottom: 0.5em;
     margin-top: 0.5em;
     display: block;
-}	
+}
+
 .text_cell_render h2 {
     font-family: 'Nixie One', serif;
     font-weight: 400;
@@ -80,7 +81,7 @@ div.text_cell_render{
 .text_cell_render h3 {
     font-family: 'Nixie One', serif;
     margin-top:16px;
-	font-size: 22pt;
+    font-size: 22pt;
     font-weight: 600;
     margin-bottom: 3px;
     font-style: regular;
@@ -118,8 +119,8 @@ div.text_cell_render{
 }
 
 .CodeMirror{
-        font-family: "PT Mono";
-        font-size: 90%;
+    font-family: "PT Mono";
+    font-size: 90%;
 }
 
 </style>
