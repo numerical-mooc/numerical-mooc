@@ -38,4 +38,4 @@ Once `conda` is finished you should be ready to go!  Open a terminal and run
 jupyter notebook
 ```
 
-to launch a notebook server, then check out the [next guide in Getting Started]() for a walkthrough of using the notebook.
+to launch a notebook server.
