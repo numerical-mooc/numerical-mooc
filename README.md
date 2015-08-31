@@ -1,20 +1,32 @@
 #Practical Numerical Methods with Python
 
-A multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. Collaboratively developed by:
+This project started in 2014 as a multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. In its first run (Fall 2014), we had three sites participating:
 - [Lorena A. Barba](http://lorenabarba.com), George Washington University, USA
 - Ian Hawke, Southampton University, UK
 - Carlos Jerez, Pontificia Universidad Catolica de Chile
 
-**Note:** David Ketcheson, from King Abdullah University of Science and Technology (KAUST), Saudi Arabia was going to be our fourth partner, but unfortunately the local course at KAUST got cancelled due to low enrollment.
+**Note:** King Abdullah University of Science and Technology (KAUST), Saudi Arabia, was going to be our fourth site, with David Ketcheson as instructor. Unfortunately the local course at KAUST got cancelled due to low enrollment and they did not participate.
 
 [**"Practical Numerical Methods with Python"**](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about) is an open, online course hosted on an independent installation of the [Open edX](http://code.edx.org) software platform for MOOCs.
-The MOOC (massive open online course) is being run by Prof. Barba at the George Washington University, while each instructor is running a local course, for credit at their institution. You can register for the MOOC at any time in the [GW Online Open edX](http://openedx.seas.gwu.edu/) platform to experience the complete course (including quizzes, examples and discussion board). 
+The MOOC (massive open online course) was run in 2014 for the first time by Prof. Barba at the George Washington University. At the same time, the other participating instructors ran a local course, for credit at their institution. 
+
+###Update for 2015
+
+The synchronous course at the George Washington University will run again, starting September 1st, 2015. In addition, there will be a **new site for numericalmooc!**
+
+- [Bernard Knaepen](http://depphys.ulb.ac.be/bknaepen/), Physics Department, Université Libre de Bruxelles
+ 
+Prof. Knaepen will be teaching his numerical methods class at ULB, adopting the numericalmooc materials and creating new content.
+
+### The MOOC
+
+You can register for the MOOC at any time in the [GW Online Open edX](http://openedx.seas.gwu.edu/) platform to experience the complete course (including quizzes, examples and discussion board). 
 
 All content is open —really open, i.e., you can use, share, mod, remix— and most is available outside the course platform also (on GitHub and YouTube).
 
 ####Find the list of IPython Notebooks, with links to nbviewer, in the [Wiki](https://github.com/numerical-mooc/numerical-mooc/wiki).
 
-##List of Course Modules
+##Course Modules
 
 1. [**The phugoid model of glider flight.**](https://github.com/numerical-mooc/numerical-mooc/tree/master/lessons/01_phugoid)
 Described by a set of two nonlinear ordinary differential equations, the phugoid model motivates numerical time integration methods, and we build it up starting from one simple equation, so that the unit can include 3 or 4 lessons  on initial value problems. This includes: a) Euler's method, 2nd-order RK, and leapfrog; b) consistency, convergence testing; c) stability
@@ -30,6 +42,5 @@ This module deals with solutions to parabolic PDEs, exemplified by the diffusion
 Laplace and Poisson equations (steps 9 and 10 of “CFD Python”), explained as systems relaxing under the influence of the boundary conditions and the Laplace operator; introducing the idea of pseudo-time and iterative methods. Linear solvers for PDEs : Jacobi’s method, slow convergence of low-frequency modes (matrix analysis of Jacobi), Jacobi as a smoother, Multigrid.
 6. **Boundaries take over: the boundary element method (BEM).**
 Weak and boundary integral formulation of elliptic partial differential equations; the free space Green's function. Boundary discretization: basis functions; collocation and Galerkin systems. The BEM stiffness matrix: dense versus sparse;  matrix conditioning. Solving the BEM system: singular and near-singular integrals; Gauss quadrature integration.
-7. **Tsunami: Shallow-water equation with finite volume method.**
-1D first … 2D problem with HPC solution (Python parallel or CUDA Python) -- *optional*.
+
 
