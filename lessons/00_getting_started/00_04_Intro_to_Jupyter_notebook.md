@@ -98,3 +98,10 @@ For a bulleted list, start the line with an `*`, then type a space followed by t
 * another list item
 * and another
 ```
+
+##Moving Cells Around
+You'll often find that you want to add or delete cells, or just move them around.  To move a cell, just click on it to select it, then use the Up- and Down-arrows in the toolbar to change the position of the cell.
+
+![movecells](./images/movingcells.gif)
+
+To add a cell, you can click the + button in the toolbar.  Once you're comfortable with the notebook layout, you can also click on Help -> Keyboard Shortcuts to find out various shortcuts for adding, deleting and managing cell position and type.  
