@@ -266,13 +266,37 @@ which will output something like
 ```
 commit e9d7cbab2205d00d5ef574fcae8ff75701529565
 Author: Gil Forsyth <gforsyth@...>
-Date:   Tue Aug 19 16:36:08 2014 -0400
+Date:   Tue Aug 19 16:36:08 2015 -0400
 
     Edit the message to sound more friendly.
 
 commit 16bb3d3b5af5e485e4713a3fdefcff7ae88ce7df
 Author: Gil Forsyth <gforsyth@...>
-Date:   Tue Aug 19 15:45:12 2014 -0400
+Date:   Tue Aug 19 15:45:12 2015 -0400
 
     First commit. Add HelloWorld.py.
 ```
+
+##Uploading your repository to Github
+
+One of the nifty features of Git is that it allows you to copy the folder containing the repository to any other location, and all the information regarding the history of the repository is also transferred automatically. It also allows you to create a backup of your repository on a remote server. Services like Github run servers where you can host your repositories for free. 
+
+Create an account on Github and follow the [instructions](https://help.github.com/articles/creating-a-new-repository) to create your own Github repository. 
+
+To avoid confusion, it's a good idea to give the Github repository the same name as the folder on your computer.
+
+After the repository is created, Github will display instructions to push an existing repository to Github using the command line. The commands are:
+
+```
+git remote add origin https://github.com/gforsyth/first_repo.git
+git push -u origin master
+```
+
+Of course, you should make the appropriate changes so it reflects your Github username and the name of your repository.
+
+`git remote add` is the command used to specify information about the remote repository to which you want to upload. To do this, we need to provide a name for the remote, and the address of the server where it is hosted. In the above, we name the remote repository `origin` (by convention), and specify the URL created by Github. 
+
+`git push` is used to push all changes from the local repository to the remote repository. The `-u` flag is only used the first time you push a new branch.
+
+##Look at your repo on Github
+Your changes should be reflected immediately on Github.  The URL for your repo should be `https://github.com/<your username>/first_repo`.  Take a look around.  You can look at the file(s) you pushed and also look at the commit history of your repository.  
