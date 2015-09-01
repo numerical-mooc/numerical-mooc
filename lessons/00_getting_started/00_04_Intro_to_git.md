@@ -71,13 +71,19 @@ print("Hello, World!")
 
 on the first line.  Then hit Ctrl+o to save the file, then Ctrl+x to exit `nano`.  
 
+##Initializing a repository
+
 Now we have a folder called `first_repo` wiht the script `HelloWorld.py` in it.  We want to convert this folder into a Git repository, which is easy!  Just type
 
 ```
 git init
 ```
 
-Now `first_repo` is a Git repository.  We can check the status of the repository using
+Now `first_repo` is a Git repository.
+
+##Repo status
+
+We can check the status of the repository using
 
 ```
 git status
@@ -97,10 +103,13 @@ which will return the following:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-What's going on here?
+####What's going on here?
 
 * The history of the repository is stored along a timeline known as a *branch*.  We're on the "main" (and only) branch.
 * At any point of time, the user can choose to save a snapshot of all the files in the repository. Each snapshot is referred to as a *commit*. The act of saving a snapshot is referred to as *committing changes*.
+
+
+##Adding files to the repository
 
 The status command also told us that we have an "Untracked file" (`HelloWorld.py`).  That means that `HelloWorld.py` isn't part of any snapshots and its history isn't being recorded by Git.
 
@@ -127,6 +136,8 @@ which gives us
 
 Note that this still does not commit the changes. The `git add` command adds the file to what is known as the staging area. This is where all the changes to the files that are ready to be committed are stored. All files in the staging area are listed under "Changes to be committed:". We can see that `HelloWorld.py` has been added to this list.
 
+##Committing changes
+
 We want to save a snapshot of the repository as it is right now; it's time to commit!
 
 ```
@@ -142,3 +153,126 @@ First commit.  Add HelloWorld.py
 Then hit Ctrl+o to save and then Ctrl+x to quit.
 
 Congratulations!  You just made your first commit!  Writing good commit messages is a habit you want to develop. It will help both you and anyone else who uses your code down the line.  Try to follow the guidelines on [this page](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) when writing commit messages.
+
+
+Check the status of the repository again:
+
+```
+git status
+```
+
+and you should see
+
+```
+# On branch master
+nothing to commit (working directory clean)
+```
+
+##Editing a tracked file
+
+Now, suppose you decide to make some changes to the file. Instead of printing "Hello world!", you want to display "Greetings Earth! We come in peace." Open `nano` again to edit the file
+
+```
+nano HelloWorld.py
+```
+
+and make the appropriate changes to the file:
+
+```
+print("Greetings Earth! We come in peace.")
+```
+
+Ctrl+o and Ctrl+x to save and quit, then check the status of the repository again
+
+```
+git status
+```
+
+You should see
+
+```
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#   modified:   HelloWorld.py
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+You have a list of files that have been changed since the last commit, along with some tips on what you can do with them.
+
+##Viewing changes
+
+We only changed one line in one file -- you probably remember that pretty clearly at this point.  But sometimes you might edit several lines, or go grab some coffee and come back, and find you can't remember everything you've done.  This is where `git diff` comes in.  It will show all the changes made to the current repository (even if they aren't committed yet!).  Try it out!
+
+```
+git diff
+```
+
+The output will look something like this:
+
+```
+diff --git a/HelloWorld.py b/HelloWorld.py
+index ed708ec..ce3f2ef 100644
+--- a/HelloWorld.py
++++ b/HelloWorld.py
+@@ -1 +1 @@
+-print "Hello world!"
++print "Greetings Earth! We come in peace."
+```
+
+All the lines starting with `-` are those that have been removed, and the lines beginning with `+` are the ones that have been added. In our case, we can see that `print("Hello world!")` has been removed and `print("Greetings Earth! We come in peace.")` has been added to the file.
+
+##Committing changes
+
+We want to add the changes we made to the history of the "HelloWorld.py" file.  To do this, we follow the same steps as when we first added the file.
+
+First, we "stage" the changes by running
+
+```
+git add HelloWorld.py
+```
+
+Now check the repo status again (you'll be typing this out LOTS):
+
+```
+> git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#   modified:   HelloWorld.py
+#
+```
+
+Now we're ready to commit that change!  But it's a pretty simple change, isn't it?  If we know that we don't need to write out a more complicated commit message, we can use a shortcut:
+
+```
+git commit -m "Edit the message to sound more friendly"
+```
+
+The `-m` flag is short for `message`.  This command will commit the changes with the message we pass to it.  No need to open `nano` this time!
+
+##Viewing a repo's history
+We have saved two snapshots of this repository.  We can look at the list of all commits using the `git log` command
+
+```
+git log
+```
+
+which will output something like
+
+```
+commit e9d7cbab2205d00d5ef574fcae8ff75701529565
+Author: Gil Forsyth <gforsyth@...>
+Date:   Tue Aug 19 16:36:08 2014 -0400
+
+    Edit the message to sound more friendly.
+
+commit 16bb3d3b5af5e485e4713a3fdefcff7ae88ce7df
+Author: Gil Forsyth <gforsyth@...>
+Date:   Tue Aug 19 15:45:12 2014 -0400
+
+    First commit. Add HelloWorld.py.
+```
