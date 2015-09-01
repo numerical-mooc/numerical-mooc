@@ -73,7 +73,15 @@ on the first line.  Then hit Ctrl+o to save the file, then Ctrl+x to exit `nano`
 
 ##Initializing a repository
 
-Now we have a folder called `first_repo` wiht the script `HelloWorld.py` in it.  We want to convert this folder into a Git repository, which is easy!  Just type
+Now we have a folder called `first_repo` with the script `HelloWorld.py` in it.  We want to convert this folder into a Git repository, which is easy!  
+
+First, check that you are in the folder you created with `pwd`.
+
+```
+pwd
+```
+
+If you are in the right place, then run
 
 ```
 git init
