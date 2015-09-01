@@ -1,3 +1,5 @@
+Based heavily on [this intro](https://github.com/barbagroup/teaching-materials/blob/master/git/00-GettingStarted.md) by @anushkrish.
+
 #Intro to git
 
 Version control is a method to keep track of changes that we introduce to a set of files or documents that we use. This is especially useful when writing code because most code is written and improved through incremental changes. Version control allows us to compare newer versions of code with older versions, and investigate when certain changes were made that may have caused the code to malfunction. Git is a one such version control software, which was created by Linus Torvalds to help with writing the Linux kernel.
@@ -11,6 +13,7 @@ When we write commit messages (this is all coming up) we need to use a text edit
 echo "export EDITOR=nano" >> .bashrc
 source .bashrc
 ```
+
 ##`git config`
 Before we use Git, we have to configure two small things to help track the changes we make to files.
 Please run the following two commands, filling in your personal info.  Make sure to use the same email address that you used to sign up for Github.
