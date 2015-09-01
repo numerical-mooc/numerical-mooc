@@ -127,4 +127,18 @@ which gives us
 
 Note that this still does not commit the changes. The `git add` command adds the file to what is known as the staging area. This is where all the changes to the files that are ready to be committed are stored. All files in the staging area are listed under "Changes to be committed:". We can see that `HelloWorld.py` has been added to this list.
 
-We want to save a snapshot of the repository as it is right now
+We want to save a snapshot of the repository as it is right now; it's time to commit!
+
+```
+git commit
+```
+
+This will open `nano` and you will see a bunch of information about the commit you are making.  Don't worry about that too much for now, let's instead focus on writing our first commit message.  Write out a commit message on the first line, something like
+
+```
+First commit.  Add HelloWorld.py
+```
+
+Then hit Ctrl+o to save and then Ctrl+x to quit.
+
+Congratulations!  You just made your first commit!  Writing good commit messages is a habit you want to develop. It will help both you and anyone else who uses your code down the line.  Try to follow the guidelines on [this page](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) when writing commit messages.
