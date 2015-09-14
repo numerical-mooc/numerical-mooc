@@ -1,9 +1,7 @@
 import numpy
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from math import pi
-from matplotlib import cm
-from laplace_helper import p_analytical, L2_rel_error
+from laplace_helper import L2_rel_error
+
 
 
 def poisson_2d(p, b, dx, dy, l2_target):
@@ -93,7 +91,7 @@ def initialization(nx, ny, xmax, xmin, ymax, ymin):
 
     # Source
     L = xmax-xmin
-    b = -2*(5*pi/L)**2*numpy.sin(5*pi*X/L)*numpy.cos(5*pi*Y/L)
+    b = -2*(pi/L)**2*numpy.sin(pi*X/L)*numpy.cos(pi*Y/L)
 
     # Initialization
     p_i  = numpy.zeros((ny,nx))
@@ -114,4 +112,4 @@ def p_analytical(X,Y,L):
     -------
     Analytical solution
     '''
-    return numpy.sin(5*X*pi/L)*numpy.cos(5*Y*pi/L)       
+    return numpy.sin(X*pi/L)*numpy.cos(Y*pi/L)       
