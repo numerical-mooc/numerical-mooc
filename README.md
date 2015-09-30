@@ -1,14 +1,15 @@
 #Practical Numerical Methods with Python
 
-This project started in 2014 as a multi-campus, connected course (plus MOOC) on numerical methods for differential equations in science and engineering. In its first run (Fall 2014), we had three sites participating:
-- [Lorena A. Barba](http://lorenabarba.com), George Washington University, USA
-- Ian Hawke, Southampton University, UK
-- Carlos Jerez, Pontificia Universidad Catolica de Chile
+This project started in 2014 as a multi-campus, connected course (plus MOOC) on numerical methods for science and engineering. 
 
-**Note:** King Abdullah University of Science and Technology (KAUST), Saudi Arabia, was going to be our fourth site, with David Ketcheson as instructor. Unfortunately the local course at KAUST got cancelled due to low enrollment and they did not participate.
+In Fall 2015, the second run of the connected courses, we have these instructors participating:
+- [Lorena A. Barba](http://lorenabarba.com), George Washington University, USA
+- [Ian Hawke](http://www.southampton.ac.uk/maths/about/staff/ih3.page), Southampton University, UK
+- [Bernard Knaepen](http://depphys.ulb.ac.be/bknaepen/), Université Libre de Bruxelles, Belgium
+
 
 [**"Practical Numerical Methods with Python"**](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about) is an open, online course hosted on an independent installation of the [Open edX](http://code.edx.org) software platform for MOOCs.
-The MOOC (massive open online course) was run in 2014 for the first time by Prof. Barba at the George Washington University. At the same time, the other participating instructors ran a local course, for credit at their institution. 
+The MOOC (massive open online course) was run in 2014 for the first time by Prof. Barba at the George Washington University. At the same time, two other participating instructors ran a local course, for credit at their institution. 
 
 ###Update for 2015
 
@@ -40,7 +41,11 @@ Starting with an overview of the concept of conservation laws, this module uses 
 This module deals with solutions to parabolic PDEs, exemplified by the diffusion (heat) equation. Starting with the 1D heat equation, we learn the details of implementing boundary conditions and are introduced to implicit schemes for the first time. Another first in this module is the solution of a two-dimensional problem. The 2D heat equation is solved with both explicit and implict schemes, each time taking special care with boundary conditions. The final lesson builds solutions with a Crank-Nicolson scheme. 
 5. **Relax and hold steady: elliptic problems.**
 Laplace and Poisson equations (steps 9 and 10 of “CFD Python”), explained as systems relaxing under the influence of the boundary conditions and the Laplace operator; introducing the idea of pseudo-time and iterative methods. Linear solvers for PDEs : Jacobi’s method, slow convergence of low-frequency modes (matrix analysis of Jacobi), Jacobi as a smoother, Multigrid.
-6. **Boundaries take over: the boundary element method (BEM).**
+6. **Perform like a pro: making your codes run faster**
+Getting performance out of your numerical Python codes with just-in-time compilation, targeting GPUs with Numba and PyCUDA.
+
+Planned module (not yet started):
+- **Boundaries take over: the boundary element method (BEM).**
 Weak and boundary integral formulation of elliptic partial differential equations; the free space Green's function. Boundary discretization: basis functions; collocation and Galerkin systems. The BEM stiffness matrix: dense versus sparse;  matrix conditioning. Solving the BEM system: singular and near-singular integrals; Gauss quadrature integration.
 
 
