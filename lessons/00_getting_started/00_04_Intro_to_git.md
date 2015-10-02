@@ -306,5 +306,16 @@ Of course, you should make the appropriate changes so it reflects your Github us
 
 `git push` is used to push all changes from the local repository to the remote repository. The `-u` flag is only used the first time you push a new branch.
 
+###`403 Forbidden while accessing...`
+Older version of `git` will sometimes throw errors while attempting to push to GitHub or any other site that uses HTTPS authentication.  If you get the above error when trying to `git push` you can fix it with one extra line:
+
+```
+git remote add origin https://github.com/gforsyth/first_repo.git
+git remote set-url origin https://gforsyth@github.com/gforsyth/first_repo.git
+git push -u origin master
+```
+
+Make sure to change the username and repository name to match what you have created.  If you are using an older version of `git`, the easiest solution is to upgrade, but if you can't for whatever reason, then running that extra command when you set up a new repository should fix the issue.
+
 ##Look at your repo on Github
 Your changes should be reflected immediately on Github.  The URL for your repo should be `https://github.com/<your username>/first_repo`.  Take a look around.  You can look at the file(s) you pushed and also look at the commit history of your repository.  
