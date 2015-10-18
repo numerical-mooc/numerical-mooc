@@ -1,5 +1,4 @@
 import numpy
-import sympy
 from matplotlib import pyplot
 from matplotlib import rcParams
 rcParams['font.family'] = 'serif'
@@ -9,7 +8,7 @@ from sympy import init_printing
 init_printing()
 
 nx = 41
-dx = 2./(nx-1)0
+dx = 2./(nx-1)
 nt = 20   
 nu = 0.3   #the value of viscosity
 sigma = 0.4
@@ -57,6 +56,7 @@ def linearconv(nx):
     pyplot.ylim(0,2.5);
     
 def diffusion(i):
+    '''Solve 1d diffusion equation'''
     dt = sigma*dx**2/nu 
     
     un = u.copy() 
