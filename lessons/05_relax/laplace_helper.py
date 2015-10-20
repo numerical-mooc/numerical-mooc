@@ -1,5 +1,5 @@
 import numpy
-import matplotlib.pyplot as plt
+from matplotlib import pyplot
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 
@@ -30,14 +30,12 @@ def plot2D(x, y, p):
         calculated potential field
     
     '''
-    fig = plt.figure(figsize=(11,7), dpi=100)
+    fig = pyplot.figure(figsize=(11,7), dpi=100)
     ax = fig.gca(projection='3d')
     X,Y = numpy.meshgrid(x,y)
     surf = ax.plot_surface(X,Y,p[:], rstride=1, cstride=1, cmap=cm.PuOr,
             linewidth=0, antialiased=False)
 
-#    ax.set_xlim(0,x[-1])
-#    ax.set_ylim(0,y[-1])
     ax.set_xlabel('$x$')
     ax.set_ylabel('$y$')
     ax.set_zlabel('$z$')
