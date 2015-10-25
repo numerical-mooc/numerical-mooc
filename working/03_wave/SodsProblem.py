@@ -12,18 +12,31 @@ dt = 2e-4
 gamma = 1.4
 
 
-def display(x, u, fun='rho', color='#003366', ls='-'):
+def display(x, u, index=0, fun='rho', color='#003366', ls='-'):
     '''Display current state'''
     
     f = numpy.zeros_like(u)
     if (fun == 'rho'):
         f = u[:,0]
-    elif (fun == 'V'):
+    elif (fun == 'v'):
         f = u[:,1]/u[:,0]
     elif (fun == 'p'):
         f = (gamma-1)*(u[:,2] - 0.5*u[:,1]**2/u[:,0])
+    
     pyplot.plot(x, f, color=color, ls=ls, lw=2)
 #    pyplot.ylim(60, 80)
+    print(f[index])
+    
+def conserv_var(rho, u, p):
+    """Computes conservative variables"""
+    
+    U = []
+    U.append(rho)   # density
+    U.append(rho*u) # momentum
+    eT = p/(gamma-1)/rho + 0.5*u**2
+    U.append(rho*eT)
+    
+    return U
     
 def init_conditions():
     """Computes initial conditions
@@ -39,8 +52,8 @@ def init_conditions():
     """
     
     u = numpy.zeros((nx, 3))
-    u_l = [1., 0., 100.]    # right
-    u_r = [0.125, 0., 10.]  # left
+    u_l = conserv_var(1.0, 0., 1e5)    # right
+    u_r = conserv_var(0.125, 0., 1e4)   # left
     u[:] = u_r
     u[:nx//2,:] = u_l
     
@@ -89,39 +102,31 @@ def richtmyer(u, T):
     """          
     
     #setup some temporary arrays
-    ustar = u.copy()
     u_n = u.copy()
-    F = numpy.zeros_like(u)  
+    F = numpy.zeros_like(u) 
+    ustar = numpy.zeros((nx-1, 3))
+    Fstar = numpy.zeros((nx-1, 3))
     nt = int(T/dt)
     
     for t in range(nt):
         F = computeF(u)
-        ustar[:-1] = 0.5*(u[1:] + u[:-1]) - 0.5*dt/dx*(F[1:] - F[:-1])     
-        F = computeF(ustar)
-        u_n[1:] = u[:-1] - dt/dx*(F[1:] - F[:-1])
-        u_n[-1] = u[-1]
+        ustar[:] = 0.5*(u[1:] + u[:-1]) - 0.5*dt/dx*(F[1:] - F[:-1])     
+        Fstar = computeF(ustar)
+        u_n[1:-1] = u[1:-1] - dt/dx*(Fstar[1:] - Fstar[:-1])
+#        u_n[0] = u[0]
+#        u_n[-1] = u[-1]
         u = u_n.copy()
-        
-#        rho_plus[:-1] = rho[1:] # Can't do i+1/2 indices, so cell boundary
-#        rho_minus = rho.copy()  # arrays at index i are at location i+1/2
-#        F = 0.5 * (computeF(V_max, rho_max, rho_minus) + 
-#                   computeF(V_max, rho_max, rho_plus) + 
-#                   dx / dt * (rho_minus - rho_plus))
-#        rho_n[1:-1] = rho[1:-1] + dt/dx*(F[:-2] - F[1:-1])
-#        rho_n[0] = rho[0]
-#        rho_n[-1] = rho[-1]
-#        rho = rho_n.copy()
         
     return u_n
 
 x = numpy.linspace(-L/2,L/2,nx)
+i = numpy.where(x==2.5)
 
 u = init_conditions()
-display(x, u, 'rho', ls='--')
-u_n = richtmyer(u, 0.001)
-display(x, u_n, 'rho', ls='-')
+#display(x, u, i, 'v', ls='--')
+u_n = richtmyer(u, 0.01)
+display(x, u_n, i, 'rho', ls='-')
 
-i = numpy.where(x==2.5)
-print(u_n)
+#print(u_n[i])
 
 
