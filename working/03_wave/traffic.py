@@ -50,10 +50,10 @@ def computeF(V_max, rho_max, rho):
     ----------
     V_max  : float
         Maximum allowed velocity
-    rho    : array of floats
-        Array with density of cars at every point x
     rho_max: float
         Maximum allowed car density
+    rho    : array of floats
+        Array with density of cars at every point x
         
     Returns
     -------
