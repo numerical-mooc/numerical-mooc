@@ -26,7 +26,7 @@ questions about handling boundary conditions, and completing the individual codi
 Earners should also have completed self-study of the five module lessons, by reading, reflecting on and writing their own version of the codes. This is not directly assessed, but it is assumed. Thus, earners are encouraged to provide evidence of this self-study by giving links to their code repositories or other learning objects they created in the process.
 
 ###Evidence: Website (link to original digital content)
-Desirable: link to the earner's GitHub repository (or equivalent) containing the solution to the "Rocket flight" coding assignment. Optional: link to the earner's GitHub repository (or equivalent) containing other codes, following the lesson.
+Desirable: link to the earner's GitHub repository (or equivalent) containing the solution to the "Reaction-Diffusion" coding assignment. Optional: link to the earner's GitHub repository (or equivalent) containing other codes, following the lesson.
 
 ###Category:
 Higher education, graduate
