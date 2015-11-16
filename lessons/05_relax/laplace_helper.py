@@ -1,7 +1,6 @@
 import numpy
-from matplotlib import pyplot
+from matplotlib import pyplot, cm
 from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import cm
 
 def L2_rel_error(p, pn):
     ''' Compute the relative L2 norm of the difference
@@ -33,7 +32,7 @@ def plot2D(x, y, p):
     fig = pyplot.figure(figsize=(11,7), dpi=100)
     ax = fig.gca(projection='3d')
     X,Y = numpy.meshgrid(x,y)
-    surf = ax.plot_surface(X,Y,p[:], rstride=1, cstride=1, cmap=cm.PuOr,
+    surf = ax.plot_surface(X,Y,p[:], rstride=1, cstride=1, cmap=cm.viridis,
             linewidth=0, antialiased=False)
 
     ax.set_xlabel('$x$')
