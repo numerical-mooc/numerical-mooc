@@ -3,6 +3,7 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 <style>
 
 @font-face {
@@ -119,10 +120,19 @@ div.text_cell_render{
 }
 
 .CodeMirror{
-    font-family: "PT Mono";
+    font-family: "Source Code Pro";
     font-size: 90%;
 }
 
+.alert-box {
+    padding:10px 10px 10px 36px;
+    margin:5px;
+}
+
+.success {
+    color:#666600;
+    background:rgb(240,242,229);
+}
 </style>
 <script>
     MathJax.Hub.Config({
