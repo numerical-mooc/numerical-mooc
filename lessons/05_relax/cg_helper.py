@@ -48,56 +48,6 @@ def poisson_2d(p, b, dx, dy, l2_target):
     print('Number of Jacobi iterations: {0:d}'.format(iterations))
     return p, l2_conv 
 
-def initialization(nx, ny, xmax, xmin, ymax, ymin):
-    '''Initialization
-    Parameters:
-    ----------
-    nx : int
-        number of mesh points in x
-    ny : int
-        number of mesh points in y
-    xmax: float
-        maximum value of x in mesh
-    xmin: float
-        minimum value of x in mesh
-    ymax: float
-        maximum value of y in mesh
-    ymin: float
-        minimum value of y in mesh
-    
-    Returns:
-    -------
-    X  : 2D array of floats
-        X-position of mesh
-    Y  : 2D array of floats
-        Y-position of mesh
-    p_i: 2D array of floats
-        initial guess of p
-    b  : 2D array of floats
-        forcing function
-    dx : float
-        mesh size in x direction
-    dy : float
-        mesh size in y direction
-    '''
-
-    dx = (xmax-xmin)/(nx-1)
-    dy = (ymax-ymin)/(ny-1)
-
-    # Mesh
-    x  = numpy.linspace(xmin,xmax,nx)
-    y  = numpy.linspace(ymin,ymax,ny)
-    X,Y = numpy.meshgrid(x,y)
-
-    # Source
-    L = xmax-xmin
-    b = -2*(pi/L)**2*numpy.sin(pi*X/L)*numpy.cos(pi*Y/L)
-
-    # Initialization
-    p_i  = numpy.zeros((ny,nx))
-
-    return X, Y, x, y, p_i, b, dx, dy, L
-
 def p_analytical(X,Y,L):
     ''' Computes analytical solution to Poisson problem
     Parameters:
