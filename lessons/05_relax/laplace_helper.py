@@ -16,7 +16,7 @@ def L2_rel_error(p, pn):
     '''
     return numpy.sqrt(numpy.sum((p - pn)**2)/numpy.sum(pn**2))
 
-def plot2D(x, y, p, elev=30, azi=45):
+def plot_3D(x, y, p, elev=30, azi=45):
     '''Creates 3D projection plot with appropriate limits and viewing angle
     
     Parameters:
