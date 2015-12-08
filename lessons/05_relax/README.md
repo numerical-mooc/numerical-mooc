@@ -21,5 +21,7 @@ We also learn about **Numba**, an optimizing compiler that gives us high perform
 * [Lesson 4](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/c8ccafcd21621b6104e334e76788305cc64cfc8b/lessons/05_relax/05_04_Conjugate.Gradient.ipynb) 
 focuses on the conjugate gradient (CG) method, perhaps the most popular iterative method.
 
+* [Assignment](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/05_relax/05_05_Stokes.Flow.ipynb): Stokes flow in vorticity-streamfunction formulation.
+
 * The [Coding Assignment](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/c8ccafcd21621b6104e334e76788305cc64cfc8b/lessons/05_relax/05_04_Conjugate.Gradient.ipynb)
 for Module 5 consists of solving the Stokes equation for flow in a square cavity at very low Reynolds number.
