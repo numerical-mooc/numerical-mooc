@@ -43,4 +43,15 @@ def local_stiffness(quad_data, basis):
     """
     return numpy.dot(quad_data.w*basis.psi.T, basis.dpsi)
 
+def stress_stiffness(quad_data, basis, mat_prop, n):
+    """Constructs the elemental stress stiffness matrix
+
+    Arguments:
+        quad_data - Quadrature points and weights
+        basis - Basis and respective derivatives
+        n - the element number
+    """
+    return (numpy.dot(quad_data.w*mat_prop.mu[:, n]*basis.psi.T, basis.dpsi).T, \
+            numpy.dot(quad_data.w*mat_prop.dmudx[:, n]*basis.psi.T, basis.psi).T)
+
 #-- local_matrices.py ----------------------------------------------------------
