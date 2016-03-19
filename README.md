@@ -48,4 +48,8 @@ Planned module (not yet started):
 - **Boundaries take over: the boundary element method (BEM).**
 Weak and boundary integral formulation of elliptic partial differential equations; the free space Green's function. Boundary discretization: basis functions; collocation and Galerkin systems. The BEM stiffness matrix: dense versus sparse;  matrix conditioning. Solving the BEM system: singular and near-singular integrals; Gauss quadrature integration.
 
+##Sponsors
+
+The initial deployment of the GW Open edX instance and the creation of the first course in the platform (Fall 2014) were funded with support from sponsors Nvidia Corp. and Amazon AWS.
+
 
