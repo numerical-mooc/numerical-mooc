@@ -1,4 +1,4 @@
-#Practical Numerical Methods with Python
+﻿#Practical Numerical Methods with Python
 
 This project started in 2014 as a multi-campus, connected course (plus MOOC) on numerical methods for science and engineering. 
 
@@ -53,3 +53,4 @@ Weak and boundary integral formulation of elliptic partial differential equation
 The initial deployment of the GW Open edX instance and the creation of the first course in the platform (Fall 2014) were funded with support from sponsors Nvidia Corp. and Amazon AWS.
 
 
+Feng Tian: lorem ipsum dolor sit amet...
