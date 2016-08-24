@@ -5,15 +5,17 @@ a variety of computer systems, but it can also be a little confusing at first
 glance. This mini-crash-course should help familiarize you with the basics of
 command line usage and navigation.
 
+## Open a terminal!
+
+Hit `⌘ + Space` to bring up spotlight, then type the first few letters of
+`Terminal` and select `Terminal`.
+
 
 ## Who am I?
 
 Time to get started! You likely know your username since you've just logged in,
 but sometimes you may have multiple accounts with slight variations on a
 username.
-
-First, please open a terminal. Hit `⌘ + Space` to bring up spotlight, then
-type `Terminal` and select `Terminal.app`.
 
 You can always ask the terminal who you are by entering
 
@@ -101,7 +103,7 @@ a `c` and Tab-complete `Documents`.
 
 Now that we have a handle on basic terminal navigation, we are going to make a
 few tweaks to this setup to make it friendlier. Copy the two lines below by
-selecting them and hitting `⌘+c`` and then paste them into the terminal using
+selecting them and hitting `⌘+c` and then paste them into the terminal using
 `⌘+v` and hit \<Enter\>. 
 
 ```console
