@@ -107,7 +107,7 @@ selecting them and hitting `⌘+c` and then paste them into the terminal using
 `⌘+v` and hit \<Enter\>. 
 
 ```console
-echo "export PATH=/Applications/anaconda/bin:\$PATH" >> .bashrc
+echo "export PATH=/Applications/anaconda/bin:\$PATH" >> .bash_profile
 ```
 
 (If you are following along and aren't at GW, don't do this, it only applies to
@@ -117,7 +117,7 @@ Now, to activate the options we just selected, type the following line in the
 terminal and hit \<Enter\>
 
 ```console
-source .bashrc
+source .bash_profile
 ```
 
 It should look a little something like this:
