@@ -124,15 +124,10 @@ It should look a little something like this:
 
 ![image](./images/6.bashrc.gif)
 
-## Fire up a jupyter notebook!
-
-It's time to get started! If you're at GW then everything is already installed,
-just run
+## Make sure Anaconda is on your PATH
 
 ```console
-jupyter notebook
+python --version
 ```
 
-in a terminal and it will launch a notebook server in your browser. If you
-*aren't* at GW, then see the next module in Getting Started on installing Python
-and Jupyter.
+That command should return a version number >= `3.5` and it should also say Anaconda.
