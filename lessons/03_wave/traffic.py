@@ -10,7 +10,7 @@ def rho_red_light(nx, rho_max, rho_in):
     rho_max   : float
         Maximum allowed car density
     rho_in    : float
-        Density of incoming cars 
+        Density of incoming cars
 
     Returns
     -------
@@ -18,7 +18,7 @@ def rho_red_light(nx, rho_max, rho_in):
         Array with initial values of density
     """
     rho = rho_max*numpy.ones(nx)
-    rho[:(nx-1)*3./4.] = rho_in
+    rho[:int(nx*3/4)] = rho_in
     return rho
 
 def computeF(V_max, rho_max, rho):
@@ -32,7 +32,7 @@ def computeF(V_max, rho_max, rho):
         Array with density of cars at every point x
     rho_max: float
         Maximum allowed car density
-        
+
     Returns
     -------
     F : array
