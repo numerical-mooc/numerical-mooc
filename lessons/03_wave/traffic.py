@@ -18,7 +18,7 @@ def rho_red_light(nx, rho_max, rho_in):
         Array with initial values of density
     """
     rho = rho_max*numpy.ones(nx)
-    rho[:int((nx-1)*3/4)] = rho_in
+    rho[:int(nx*3/4)] = rho_in
     return rho
 
 def computeF(V_max, rho_max, rho):
