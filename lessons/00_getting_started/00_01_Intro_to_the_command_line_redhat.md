@@ -1,4 +1,4 @@
-#Intro to the command line
+# Intro to the command line
 
 Welcome! The command line can be one of the most powerful ways to interact with
 a variety of computer systems, but it can also be a little confusing at first
@@ -28,7 +28,7 @@ and hitting \<Enter\>. (From now on, after typing in a command, just hit
 
 ![whoami](./images/1.whoami.gif)
 
-##Where am I?
+## Where am I?
 
 We know who we are, time to find out *where* we are. You can always find out
 what folder you're in by using the "print working directory" command, or `pwd`.
@@ -46,7 +46,7 @@ If you're using your own Linux machine, the home directory is probably
 `/home/<username>`. If you're on a Mac, the home directory is
 `/Users/<username>` (they like to be different).
 
-##What's in here?
+## What's in here?
 
 We know who we are and where we are, now it's time to figure out what's in here.
 We use the "list" command, `ls`, to view any files or directories that are in
@@ -63,7 +63,7 @@ created by default in Red Hat Linux. Your home folder is actually the same
 folder as your Titan network drive on Windows, so you may have other files and
 folders in your home directory.
 
-##How do I go there?
+## How do I go there?
 
 To navigate to a new folder, we use the change directory command, `cd`, followed
 by the name of the folder. While you *can* type out the full folder name, it's
@@ -83,7 +83,7 @@ directory to get the hang of moving around.
 
 ![cd](./images/4.cd.gif)
 
-###Multiple tab-completions
+### Multiple tab-completions
 
 If there are multiple possible completions for a partial directory name, you can
 ask the terminal to display them by hitting TAB twice. Try entering
@@ -97,7 +97,7 @@ a `c` and Tab-complete `Documents`.
 
 ![cdtabtab](./images/5.cdtabtab.gif)
 
-##Quick config step
+## Quick config step
 
 Now that we have a handle on basic terminal navigation, we are going to make a
 few tweaks to this setup to make it friendlier. Copy the two lines below by
@@ -124,7 +124,7 @@ It should look a little something like this:
 
 ![image](./images/6.bashrc.gif)
 
-##Fire up a jupyter notebook!
+## Fire up a jupyter notebook!
 
 It's time to get started! If you're at GW then everything is already installed,
 just run
