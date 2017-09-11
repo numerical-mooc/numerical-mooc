@@ -1,4 +1,4 @@
-#Module 4:
+# Module 4:
 ## Spreading out: diffusion problems
 ## Summary
 This module focuses on solution of parabolic PDEs, like the diffusion equation. It introduces for the first time implicit methods and covers both one- and two-dimensional problems.
@@ -14,27 +14,27 @@ This module focuses on solution of parabolic PDEs, like the diffusion equation. 
 * [Lesson 5](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/04_05_Crank-Nicolson.ipynb) is dedicated to the Crank-Nicolson scheme, including a study of spatial and time accuracy and convergence.
 * [Coding assignment](http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/04_06_Reaction_Diffusion.ipynb) Reaction-diffusion with the Gray-Scott model in 2D.
 
-##Badge earning
+## Badge earning
 Completion of this module in the online course platform can earn the learner the Module 4 badge.
 
-###Description: What does this badge represent?
+### Description: What does this badge represent?
 The earner completed Module 4 of the course "Practical Numerical Methods with Python" (a.k.a., numericalmooc).
 
-###Criteria: What needs to be done to earn it?
+### Criteria: What needs to be done to earn it?
 To earn this badge, the learner needs to complete the graded assessment in the course platform including: answering quiz
 questions about handling boundary conditions, and completing the individual coding assignment on the Gray-Scott model of reaction-diffusion  and answering the numeric questions online.
 Earners should also have completed self-study of the five module lessons, by reading, reflecting on and writing their own version of the codes. This is not directly assessed, but it is assumed. Thus, earners are encouraged to provide evidence of this self-study by giving links to their code repositories or other learning objects they created in the process.
 
-###Evidence: Website (link to original digital content)
+### Evidence: Website (link to original digital content)
 Desirable: link to the earner's GitHub repository (or equivalent) containing the solution to the "Reaction-Diffusion" coding assignment. Optional: link to the earner's GitHub repository (or equivalent) containing other codes, following the lesson.
 
-###Category:
+### Category:
 Higher education, graduate
 
-###Tags:
+### Tags:
 engineering, computation, higher education, numericalmooc, python, gwu, george washington university, lorena barba, github
 
-###Relevant Links: Is there more information on the web?
+### Relevant Links: Is there more information on the web?
 
 [Course About page](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about)
 
