@@ -21,7 +21,7 @@ All content is open —really open, i.e., you can use, share, mod, remix— and 
 
 ## Getting Started
 
-1. Introduction to the command line: [OS X version]](https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/00_getting_started/00_01_Intro_to_the_command_line_osx.md); [RedHat version](https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/00_getting_started/00_01_Intro_to_the_command_line_redhat.md)
+1. Introduction to the command line: [OS X version](https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/00_getting_started/00_01_Intro_to_the_command_line_osx.md); [RedHat version](https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/00_getting_started/00_01_Intro_to_the_command_line_redhat.md)
 2. [Installing Jupyter](https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/00_getting_started/00_02_Installing_Jupyter.md)
 3. [Introduction to Jupyter notebooks](https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/00_getting_started/00_03_Intro_to_Jupyter_notebook.md)
 4. [Introduction to git](https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/00_getting_started/00_04_Intro_to_git.md)
