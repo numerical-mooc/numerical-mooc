@@ -8,7 +8,7 @@ In Fall 2015 and 2016, second and third run of the connected courses, we had the
 - [Bernard Knaepen](http://depphys.ulb.ac.be/bknaepen/), Université Libre de Bruxelles, Belgium
 
 
-[**"Practical Numerical Methods with Python"**](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about) is an open, online course hosted on an independent installation of the [Open edX](http://code.edx.org) software platform for MOOCs.
+[**"Practical Numerical Methods with Python"**](https://openedx.seas.gwu.edu/courses/course-v1:MAE+MAE6286+2017/about) is an open, online course hosted on an independent installation of the [Open edX](http://code.edx.org) software platform for MOOCs.
 The MOOC (massive open online course) was run in 2014 for the first time by Prof. Barba at the George Washington University. At the same time, two other participating instructors ran a local course, for credit at their institution. 
 
 ### The MOOC
