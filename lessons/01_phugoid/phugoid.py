@@ -117,7 +117,7 @@ def plot_flight_path(zt, z0, theta0, N=1000):
         x[i], z[i] = rotate((x[i - 1], z[i - 1]),
                             center=center, angle=dtheta, mode='radians')
         theta += dtheta
-    # Set type and size of font for Matplotlib figures.
+    # Set the font family and size to use for Matplotlib figures.
     pyplot.rcParams['font.family'] = 'serif'
     pyplot.rcParams['font.size'] = 16
     # Create Matplotlib figure.
