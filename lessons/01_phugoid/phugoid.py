@@ -127,7 +127,7 @@ def plot_flight_path(zt, z0, theta0, N=1000):
                  rf'($z_t={zt:.1f}$, $z_0={z0:.1f}$, ' +
                  rf'$\theta_0={numpy.degrees(theta0):.1f}^o$)')
     ax.set_xlabel(r'$x$')
-    ax.set_ylabel(r'$y$')
+    ax.set_ylabel(r'$z$')
     ax.plot(x, -z, linestyle='-', linewidth=2.0)
     ax.axis('scaled', adjustable='box')
     pyplot.show()
