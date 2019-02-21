@@ -1,12 +1,12 @@
 Based heavily on [this intro](https://github.com/barbagroup/teaching-materials/blob/master/git/00-GettingStarted.md) by @anushkrish.
 
-#Intro to git
+# Intro to git
 
 Version control is a method to keep track of changes that we introduce to a set of files or documents that we use. This is especially useful when writing code because most code is written and improved through incremental changes. Version control allows us to compare newer versions of code with older versions, and investigate when certain changes were made that may have caused the code to malfunction. Git is a one such version control software, which was created by Linus Torvalds to help with writing the Linux kernel.
 
 Version control systems store files in a directory known as a repository. Apart from the files, a repository also contains information about the history of each file, and all the edits that were made. In this tutorial, we will learn how to create a Git repository, add files to it, make changes to those files, and record the history of those changes.
 
-##Before anything else
+## Before anything else
 When we write commit messages (this is all coming up) we need to use a text editor.  The default text editor, `vim`, is... unfriendly.  It's incredibly powerful but not the way you want to start off.  In light of that, let's change the default editor to the more friendly `nano` by doing the following in a terminal (we only do this once, the changes will persist):
 
 ```
@@ -14,7 +14,7 @@ echo "export EDITOR=nano" >> .bashrc
 source .bashrc
 ```
 
-##`git config`
+## `git config`
 Before we use Git, we have to configure two small things to help track the changes we make to files.
 Please run the following two commands, filling in your personal info.  Make sure to use the same email address that you used to sign up for Github.
 
@@ -25,7 +25,7 @@ git config --global user.name "First Last"
 
 If you copy+paste these, make sure to do it one line at a time.  If you paste two lines into a terminal, it will run the first command automatically and Git will think your email address is "your.github.email".
 
-##Creating a `git` repository
+## Creating a `git` repository
 First we are going to make a new directory that will become our first git repository.  
 Do you remember the command to make a new directory?  It's `mkdir`!  We like to keep all of our `git` directories in a folder called "git".  Let's make that folder first.
 
@@ -48,7 +48,7 @@ mkdir first repo
 
 You'll actually end up with *two* folders, one called `first` and one called `repo`.
 
-###Add a Python script to the new directory
+### Add a Python script to the new directory
 
 Let's `cd` into `first_repo` and then create a quick Python script.
 
@@ -57,12 +57,12 @@ cd first_repo
 nano HelloWorld.py
 ```
 
-###What's `nano`?
+### What's `nano`?
 `nano` is a simple terminal-based text editor.  There are several incredibly powerful terminal based editors (vim, emacs) but they come with pretty steep learning curves.  `nano` is much friendlier.
 
 The file `HelloWorld.py` doesn't exist, but we run `nano HelloWorld.py` and it creates that file and opens it for editing.
 
-###Back to the script
+### Back to the script
 Type
 
 ```Python
@@ -71,7 +71,7 @@ print("Hello, World!")
 
 on the first line.  Then hit Ctrl+o to save the file, then Ctrl+x to exit `nano`.  
 
-##Initializing a repository
+## Initializing a repository
 
 Now we have a folder called `first_repo` with the script `HelloWorld.py` in it.  We want to convert this folder into a Git repository, which is easy!  
 
@@ -89,7 +89,7 @@ git init
 
 Now `first_repo` is a Git repository.
 
-##Repo status
+## Repo status
 
 We can check the status of the repository using
 
@@ -111,13 +111,13 @@ which will return the following:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-####What's going on here?
+#### What's going on here?
 
 * The history of the repository is stored along a timeline known as a *branch*.  We're on the "main" (and only) branch.
 * At any point of time, the user can choose to save a snapshot of all the files in the repository. Each snapshot is referred to as a *commit*. The act of saving a snapshot is referred to as *committing changes*.
 
 
-##Adding files to the repository
+## Adding files to the repository
 
 The status command also told us that we have an "Untracked file" (`HelloWorld.py`).  That means that `HelloWorld.py` isn't part of any snapshots and its history isn't being recorded by Git.
 
@@ -144,7 +144,7 @@ which gives us
 
 Note that this still does not commit the changes. The `git add` command adds the file to what is known as the staging area. This is where all the changes to the files that are ready to be committed are stored. All files in the staging area are listed under "Changes to be committed:". We can see that `HelloWorld.py` has been added to this list.
 
-##Committing changes
+## Committing changes
 
 We want to save a snapshot of the repository as it is right now; it's time to commit!
 
@@ -176,7 +176,7 @@ and you should see
 nothing to commit (working directory clean)
 ```
 
-##Editing a tracked file
+## Editing a tracked file
 
 Now, suppose you decide to make some changes to the file. Instead of printing "Hello world!", you want to display "Greetings Earth! We come in peace." Open `nano` again to edit the file
 
@@ -210,7 +210,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 You have a list of files that have been changed since the last commit, along with some tips on what you can do with them.
 
-##Viewing changes
+## Viewing changes
 
 We only changed one line in one file -- you probably remember that pretty clearly at this point.  But sometimes you might edit several lines, or go grab some coffee and come back, and find you can't remember everything you've done.  This is where `git diff` comes in.  It will show all the changes made to the current repository (even if they aren't committed yet!).  Try it out!
 
@@ -232,7 +232,7 @@ index ed708ec..ce3f2ef 100644
 
 All the lines starting with `-` are those that have been removed, and the lines beginning with `+` are the ones that have been added. In our case, we can see that `print("Hello world!")` has been removed and `print("Greetings Earth! We come in peace.")` has been added to the file.
 
-##Committing changes
+## Committing changes
 
 We want to add the changes we made to the history of the "HelloWorld.py" file.  To do this, we follow the same steps as when we first added the file.
 
@@ -262,7 +262,7 @@ git commit -m "Edit the message to sound more friendly"
 
 The `-m` flag is short for `message`.  This command will commit the changes with the message we pass to it.  No need to open `nano` this time!
 
-##Viewing a repo's history
+## Viewing a repo's history
 We have saved two snapshots of this repository.  We can look at the list of all commits using the `git log` command
 
 ```
@@ -285,7 +285,7 @@ Date:   Tue Aug 19 15:45:12 2015 -0400
     First commit. Add HelloWorld.py.
 ```
 
-##Uploading your repository to Github
+## Uploading your repository to Github
 
 One of the nifty features of Git is that it allows you to copy the folder containing the repository to any other location, and all the information regarding the history of the repository is also transferred automatically. It also allows you to create a backup of your repository on a remote server. Services like Github run servers where you can host your repositories for free. 
 
@@ -306,7 +306,7 @@ Of course, you should make the appropriate changes so it reflects your Github us
 
 `git push` is used to push all changes from the local repository to the remote repository. The `-u` flag is only used the first time you push a new branch.
 
-###`403 Forbidden while accessing...`
+### `403 Forbidden while accessing...`
 Older version of `git` will sometimes throw errors while attempting to push to GitHub or any other site that uses HTTPS authentication.  If you get the above error when trying to `git push` you can fix it with one extra line:
 
 ```
@@ -317,5 +317,5 @@ git push -u origin master
 
 Make sure to change the username and repository name to match what you have created.  If you are using an older version of `git`, the easiest solution is to upgrade, but if you can't for whatever reason, then running that extra command when you set up a new repository should fix the issue.
 
-##Look at your repo on Github
+## Look at your repo on Github
 Your changes should be reflected immediately on Github.  The URL for your repo should be `https://github.com/<your username>/first_repo`.  Take a look around.  You can look at the file(s) you pushed and also look at the commit history of your repository.  

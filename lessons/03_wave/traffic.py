@@ -1,41 +1,49 @@
+"""
+Implementation of functions for the traffic model.
+"""
+
 import numpy
 
-def rho_red_light(nx, rho_max, rho_in):
-    """Computes "red light" initial condition with shock
+
+def rho_red_light(x, rho_max):
+    """
+    Computes the "red light" initial condition with shock.
 
     Parameters
     ----------
-    nx        : int
-        Number of grid points in x
-    rho_max   : float
-        Maximum allowed car density
-    rho_in    : float
-        Density of incoming cars 
+    x : numpy.ndarray
+        Locations on the road as a 1D array of floats.
+    rho_max : float
+        The maximum traffic density allowed.
 
     Returns
     -------
-    rho: array of floats
-        Array with initial values of density
+    rho : numpy.ndarray
+        The initial car density along the road as a 1D array of floats.
     """
-    rho = rho_max*numpy.ones(nx)
-    rho[:(nx-1)*3./4.] = rho_in
+    rho = rho_max * numpy.ones_like(x)
+    mask = numpy.where(x < 3.0)
+    rho[mask] = 0.5 * rho_max
     return rho
 
-def computeF(V_max, rho_max, rho):
-    """Computes flux F=V*rho
+
+def flux(rho, u_max, rho_max):
+    """
+    Computes the traffic flux F = V * rho.
 
     Parameters
     ----------
-    V_max  : float
-        Maximum allowed velocity
-    rho    : array of floats
-        Array with density of cars at every point x
-    rho_max: float
-        Maximum allowed car density
-        
+    rho : numpy.ndarray
+       Traffic density along the road as a 1D array of floats.
+    u_max : float
+        Maximum speed allowed on the road.
+    rho_max : float
+        Maximum car density allowed on the road.
+
     Returns
     -------
-    F : array
-        Array with flux at every point x
+    F : numpy.ndarray
+        The traffic flux along the road as a 1D array of floats.
     """
-    return V_max*rho*(1-rho/rho_max)
+    F = rho * u_max * (1.0 - rho / rho_max)
+    return F
