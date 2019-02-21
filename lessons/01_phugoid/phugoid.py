@@ -1,112 +1,133 @@
-# Script to plot the flight path of the phugoid using Lanchester's model.
-# It uses the sign convention and formulae provided by Milne-Thomson (1958).
+"""
+Implementation of the functions to compute and plot the flight path of the
+phugoid using Lanchester's mode.
+The implementation uses the sign convention and formula provided by
+Milne-Thomson (1958).
+"""
 
 import numpy
 from matplotlib import pyplot
 
+
+# Ignore over/underflow errors that pop up in the `radius_of_curvature`
+# function.
+# (See http://docs.scipy.org/doc/numpy/reference/generated/numpy.seterr.html
+# for more explanations.)
 numpy.seterr(all='ignore')
-'''
-see http://docs.scipy.org/doc/numpy/reference/generated/numpy.seterr.html for explanation.  ignore over/underflow errors that pop up in the radius_of_curvature function
-'''
+
 
 def radius_of_curvature(z, zt, C):
-    """Returns the radius of curvature of the flight path at any point.
-    
+    """
+    Returns the radius of curvature of the flight path at any point.
+
     Parameters
-    ---------
+    ----------
     z : float
-        current depth below the reference horizontal line.
+        Current depth below the reference horizontal line.
     zt : float
-        initial depth below the reference horizontal line.
+        Initial depth below the reference horizontal line.
     C : float
-        constant of integration.
+        Constant of integration.
 
     Returns
     -------
     radius : float
-        radius of curvature.
+        Radius of curvature.
     """
-    return zt / (1/3 - C/2*(zt/z)**1.5)
+    return zt / (1 / 3 - C / 2 * (zt / z)**1.5)
 
-def rotate(x, z, xCenter, zCenter, angle):
-    """Returns the new position of the point.
+
+def rotate(coords, center=(0.0, 0.0), angle=0.0, mode='degrees'):
+    """
+    Rotates a point or an array of points
+    by a given angle around a given center point.
 
     Parameters
-    ---------
-    x : float
-        previous x-position of the point
-    z : float
-        previous z-position of the point.
-    xCenter : float
-        x-location of the center of rotation.
-    zCenter : float
-        z-location of the center of rotation.
-    angle : float
-        angle of rotation
+    ----------
+    coords :tuple
+        Current x and z positions of the point(s)
+        as a tuple of two floats or a tuple of two 1D arrays of floats.
+    center : tuple, optional
+        Center of rotation (x, z) as a tuple of two floats;
+        default: (0.0, 0.0).
+    angle : float, optional
+        Angle of rotation;
+        default: 0.0.
+    mode : string, optional
+        Set if angle given in degrees or radians;
+        choices: ['degrees', 'radians'];
+        default: 'degrees'.
 
     Returns
     -------
-    xCenter_new : float
-        new x-location of the center of rotation.
-    zCenter_new : float
-        new z-location of the center of rotation.
+    x_new : float or numpy.ndarray
+        x position of the rotated point(s)
+        as a single float or a 1D array of floats.
+    z_new : float or numpy.ndarray
+        z position of the rotated point(s)
+        as a single float or a 1D array of floats.
     """
-    dx = x - xCenter
-    dz = z - zCenter
-    # the following formulae take into account the orientation of the axes
-    xNew = dx*numpy.cos(angle) + dz*numpy.sin(angle)
-    zNew = -dx*numpy.sin(angle) + dz*numpy.cos(angle)
-    return xCenter + xNew, zCenter + zNew
+    x, z = coords
+    xc, zc = center
+    if mode == 'degrees':
+        angle = numpy.radians(angle)
+    x_new = xc + (x - xc) * numpy.cos(angle) + (z - zc) * numpy.sin(angle)
+    z_new = zc - (x - xc) * numpy.sin(angle) + (z - zc) * numpy.cos(angle)
+    return x_new, z_new
 
-def plot_flight_path(zt, z0, theta0):
-    """Plots the flight path.
+
+def plot_flight_path(zt, z0, theta0, N=1000):
+    """
+    Plots the flight path of the glider.
 
     Parameters
-    ---------
+    ----------
     zt : float
-        trim height of the glider.
+        Trim height of the glider.
     z0 : float
-        initial height of the glider.
+        Initial height of the glider.
     theta0 : float
-        initial orientation of the glider.
-
-    Returns
-    -------
-    None : None
+        Initial orientation of the glider (in degrees).
+    N : integer, optional
+        Number of points used to discretize the path;
+        default: 1000.
     """
-    # arrays to store the coordinates of the flight path
-    N = 1000
-    z = numpy.zeros(N)
-    x = numpy.zeros(N)
-
-    # set initial conditions
-    z[0] = z0
-    x[0] = 0.
-    theta = theta0
-
-    # calculate the constant C
-    C = (numpy.cos(theta) - 1/3*z[0]/zt)*(z[0]/zt)**.5
-    # incremental distance along the flight path
-    ds = 1 
-        
-    #obtain the curve coordinates
-    for i in range(1,N):
-        # minus sign for the second coordinate because the z-axis points downwards
-        normal = numpy.array([numpy.cos(theta+numpy.pi/2.), -numpy.sin(theta+numpy.pi/2.)])
-        R = radius_of_curvature(z[i-1], zt, C)
-        center = numpy.array([x[i-1]+normal[0]*R, z[i-1]+normal[1]*R])
-        dtheta = ds/R
-        x[i], z[i] = rotate(x[i-1], z[i-1], center[0], center[1], dtheta)
-        theta = theta + dtheta
-
-    # generate a plot
-    pyplot.figure(figsize=(10,6))
-    pyplot.plot(x, -z, color = 'k', ls='-', lw=2.0, label="$z_t=\ %.1f,\\,z_0=\ %.1f,\\,\\theta_0=\ %.2f$" % (zt, z[0], theta0))
-    pyplot.axis('equal')
-    pyplot.title("Flight path for $C$ = %.3f" % C, fontsize=18)
-    pyplot.xlabel("$x$", fontsize=18)
-    pyplot.ylabel("$z$", fontsize=18)
-    pyplot.legend()
+    # Convert initial angle to radians.
+    theta0 = numpy.radians(theta0)
+    # Create arrays to store the coordinates of the flight path.
+    x, z = numpy.zeros(N), numpy.zeros(N)
+    # Set initial conditions.
+    x[0], z[0], theta = 0.0, z0, theta0
+    # Calculate the constant of integration C.
+    C = (numpy.cos(theta) - 1 / 3 * z[0] / zt) * (z[0] / zt)**0.5
+    # Set incremental distance along the flight path.
+    ds = 1.0
+    # Calculate coordinates along the path.
+    for i in range(1, N):
+        # We use a minus sign for the second coordinate of the normal vector
+        # because the z-axis points downwards.
+        normal = numpy.array([+ numpy.cos(theta + numpy.pi / 2.0),
+                              - numpy.sin(theta + numpy.pi / 2.0)])
+        # Get curvature radius and compute center of rotation.
+        R = radius_of_curvature(z[i - 1], zt, C)
+        center = numpy.array([x[i - 1], z[i - 1]]) + R * normal
+        # Set angular increment.
+        dtheta = ds / R
+        # Calculate new position and update angle.
+        x[i], z[i] = rotate((x[i - 1], z[i - 1]),
+                            center=center, angle=dtheta, mode='radians')
+        theta += dtheta
+    # Set the font family and size to use for Matplotlib figures.
+    pyplot.rcParams['font.family'] = 'serif'
+    pyplot.rcParams['font.size'] = 16
+    # Create Matplotlib figure.
+    fig, ax = pyplot.subplots(figsize=(9.0, 4.0))
+    ax.grid()
+    ax.set_title(f'Flight path for $C={C:.3f}$\n' +
+                 rf'($z_t={zt:.1f}$, $z_0={z0:.1f}$, ' +
+                 rf'$\theta_0={numpy.degrees(theta0):.1f}^o$)')
+    ax.set_xlabel(r'$x$')
+    ax.set_ylabel(r'$z$')
+    ax.plot(x, -z, linestyle='-', linewidth=2.0)
+    ax.axis('scaled', adjustable='box')
     pyplot.show()
-
-# End of File
