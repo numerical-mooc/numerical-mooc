@@ -8,12 +8,11 @@ In Fall 2015 and 2016, second and third run of the connected courses, we had the
 - [Bernard Knaepen](http://depphys.ulb.ac.be/bknaepen/), Université Libre de Bruxelles, Belgium
 
 
-[**"Practical Numerical Methods with Python"**](https://openedx.seas.gwu.edu/courses/course-v1:MAE+MAE6286+2017/about) is an open, online course hosted on an independent installation of the [Open edX](http://code.edx.org) software platform for MOOCs.
+**"Practical Numerical Methods with Python"** was an open, online course hosted on an independent installation of the [Open edX](http://code.edx.org) software platform for MOOCs.
 The MOOC (massive open online course) was run in 2014 for the first time by Prof. Barba at the George Washington University. At the same time, two other participating instructors ran a local course, for credit at their institution. 
+After being live for 10 years, we have made the decision to take down the self-hosted Open edX platform (which was incurring running AWS costs).
 
-### The MOOC
-
-You can register for the MOOC at any time in the [GW Online Open edX](http://openedx.seas.gwu.edu/) platform to experience the complete course (including quizzes, examples and discussion board). 
+### Open Education
 
 All content is open —really open, i.e., you can use, share, mod, remix— and most is available outside the course platform also (on GitHub and YouTube).
 
@@ -42,7 +41,7 @@ This module deals with solutions to parabolic PDEs, exemplified by the diffusion
 Laplace and Poisson equations (steps 9 and 10 of “CFD Python”), seen as systems relaxing under the influence of the boundary conditions and the Laplace operator. Iterative methods for algebraic equations resulting from discretizign PDEx: Jacobi method, Gauss-Seidel and successive over-relaxation methods. Conjugate gradient methods.
 
 
-Planned modules:
+Planned modules (that never materialized!):
 - **Perform like a pro: making your codes run faster**
 Getting performance out of your numerical Python codes with just-in-time compilation, targeting GPUs with Numba and PyCUDA.
 - **Boundaries take over: the boundary element method (BEM).**
