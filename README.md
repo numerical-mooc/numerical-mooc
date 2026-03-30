@@ -5,7 +5,7 @@ This project started in 2014 as a multi-campus, connected course (plus MOOC) on 
 In Fall 2015 and 2016, second and third run of the connected courses, we had these instructors participating (using the materials as part of their syllabus):
 - [Lorena A. Barba](http://lorenabarba.com), George Washington University, USA
 - [Ian Hawke](http://www.southampton.ac.uk/maths/about/staff/ih3.page), Southampton University, UK
-- [Bernard Knaepen](http://depphys.ulb.ac.be/bknaepen/), Université Libre de Bruxelles, Belgium
+- [Bernard Knaepen](https://web.archive.org/web/20180916074255/http://depphys.ulb.ac.be/bknaepen/), Université Libre de Bruxelles, Belgium
 
 
 **"Practical Numerical Methods with Python"** was an open, online course hosted on an independent installation of the [Open edX](http://code.edx.org) software platform for MOOCs.
