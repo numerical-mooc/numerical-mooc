@@ -32,10 +32,4 @@ Higher education, graduate
 ### Tags:
 engineering, computation, higher education, numericalmooc, python, gwu, george washington university, lorena barba, github
 
-### Relevant Links: Is there more information on the web?
-
-[Course About page](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about)
-
-[Course wiki](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/wiki/GW.MAE6286.2014_fall/)
-
 [Course GitHub repo](https://github.com/numerical-mooc/numerical-mooc)
