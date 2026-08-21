@@ -1,5 +1,8 @@
 # Practical Numerical Methods with Python
 
+> [!IMPORTANT]
+> This repository preserves the legacy 2014–2016 edition of the course and is no longer being updated. Development of the new edition continues in [Practical Numerical Methods](https://github.com/numerical-mooc/practical-numerical-methods).
+
 This project started in 2014 as a multi-campus, connected course (plus MOOC) on numerical methods for science and engineering. 
 
 In Fall 2015 and 2016, second and third run of the connected courses, we had these instructors participating (using the materials as part of their syllabus):
@@ -50,5 +53,4 @@ Weak and boundary integral formulation of elliptic partial differential equation
 ## Sponsors
 
 The initial deployment of the GW SEAS Open edX instance and the creation of the first course in the platform (Fall 2014) were funded with a seed grant from the GW VP for Online Education and Academic Innovation, TA support from the GW School of Engineering and Applied Sciences, and additional support from Nvidia Corp. Academic Programs and Amazon AWS (donated cloud credits for the first year).
-
 
